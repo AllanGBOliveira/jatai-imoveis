@@ -83,22 +83,38 @@
                         <div id="map" data-title="K13 Agência Web" data-lat="<?= $location["lat"]?>" data-lng="
                     <?= $location["lng"]?>" data-address="
                     <?= $location['address'] ?>">
+
+                    */ ?>
+                    <div id="map" data-title="K13 Agência Web" data-lat="-25.384988" data-lng="-51.467499"
+                        data-address="R. Benjamin Constant, 1499 - Centro, Guarapuava - PR, 85010-190, Brasil"></div>
+                    <a id="waze"
+                        href="https://www.waze.com/ul?ll=<?= $location['lat'] ?>%2C<?= $location['lng'] ?>&navigate=yes"
+                        target="_blank" rel="noreferrer" class="waze" aria-label="Ver a localização pelo Waze"><i
+                            class="fab fa-waze"></i>
+                        <span>Ver no Waze</span>
+                    </a>
+                </section>
             </div>
-            */ ?>
-            <div id="map" data-title="K13 Agência Web" data-lat="-25.384988" data-lng="-51.467499"
-                data-address="R. Benjamin Constant, 1499 - Centro, Guarapuava - PR, 85010-190, Brasil"></div>
-            <a id="waze"
-                href="https://www.waze.com/ul?ll=<?= $location['lat'] ?>%2C<?= $location['lng'] ?>&navigate=yes"
-                target="_blank" rel="noreferrer" class="waze" aria-label="Ver a localização pelo Waze"><i
-                    class="fab fa-waze"></i>
-                <span>Ver no Waze</span>
-            </a>
-            </section>
         </div>
-    </div>
 </main>
 
 <div class="realty-search">
+    <div class="container">
+        <div class="mobile-text d-block d-sm-none">
+            <p>Digite aqui o imóvel que você
+            </p>
+            <p>procura ou código do imóvel</p>
+        </div>
+        <form class="btn-search" action="search.php" method="GET" role="search">
+            <input type="search" id="search-mobile" name="search"
+                placeholder="Digite aqui o imóvel que você procura ou código do imóvel" aria-label="Pesquisar"
+                required />
+            <button type="submit" aria-label="Buscar"><i class="fas fa-search"></i></button>
+        </form>
+
+        <button type="button" class=" btn-color-4">quero comprar</button>
+        <button type="button" class=" btn-color-3">quero alugar</button>
+    </div>
 
 </div>
 

@@ -435,12 +435,6 @@ body ::-moz-selection {
   }
 }
 
-.realty-search {
-  height: 296px;
-  width: 100vw;
-  background-color: #ed8f01;
-}
-
 .breadcrumb {
   padding: 28.5px 0;
   margin-bottom: 0;
@@ -2635,8 +2629,8 @@ footer #k13 a:hover {
 }
 
 .form-layout .form-group button:hover {
-  background: #282828;
-  color: #fff;
+  background-color: #fbe9cc;
+  color: #ed8f01;
 }
 
 .form-layout .form-group .attachment {
@@ -2903,6 +2897,8 @@ footer #k13 a:hover {
   height: 100%;
   position: absolute;
   overflow: hidden;
+  padding-bottom: 45px;
+  text-transform: uppercase;
 }
 
 #contact .map .skip-link {
@@ -2924,15 +2920,14 @@ footer #k13 a:hover {
 
 #contact .map .waze {
   position: absolute;
-  bottom: 0;
+  bottom: 10px;
   left: 50%;
   -webkit-transform: translateX(-50%);
   transform: translateX(-50%);
-  background-color: #9b4a14;
+  background-color: transparent;
   color: #fff;
   display: inline-block;
-  padding: 15px 20px;
-  font-size: 17px;
+  font-size: 18px;
 }
 
 #contact .map .waze svg,
@@ -2942,12 +2937,12 @@ footer #k13 a:hover {
 }
 
 #contact .map .waze svg {
-  font-size: 22px;
+  font-size: 31px;
   margin-right: 8px;
 }
 
 #contact .map .waze:hover {
-  background-color: #ed8f01;
+  opacity: 0.6;
 }
 
 @media (max-width: 767.98px) {
@@ -2963,6 +2958,187 @@ footer #k13 a:hover {
     height: 450px;
     position: relative;
   }
+}
+
+.realty-search {
+  height: 296px;
+  width: 100vw;
+  background-color: #ed8f01;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.realty-search .container {
+  max-width: 699px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: left;
+}
+
+.realty-search .container .mobile-text {
+  width: 100%;
+  margin-bottom: 5px;
+}
+
+.realty-search .container .mobile-text p {
+  color: #fff;
+  font-size: 18px;
+}
+
+@media (max-width: 991.98px) {
+  .realty-search .container {
+    max-width: 100%;
+  }
+}
+
+.realty-search .btn-search {
+  width: 100%;
+  height: 56px;
+  border-radius: 100px;
+  background-color: white;
+  padding-left: 35px;
+  padding-right: 25px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.realty-search .btn-search label {
+  width: 0;
+}
+
+.realty-search .btn-search label span {
+  display: inline-block;
+  overflow: hidden;
+  width: 1px;
+  height: 1px;
+}
+
+.realty-search .btn-search input[type="search"], .realty-search .btn-search .form-layout .form-group textarea[type="search"], .form-layout .form-group .realty-search .btn-search textarea[type="search"], .realty-search .btn-search .form-layout .form-group .select-custom-box .text[type="search"], .form-layout .form-group .select-custom-box .realty-search .btn-search .text[type="search"],
+.realty-search .btn-search button {
+  margin: 0;
+  border: 0;
+  float: left;
+  color: #828282;
+  padding: 0 10px;
+  border-radius: 0;
+  background-color: transparent;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.realty-search .btn-search input[type="search"], .realty-search .btn-search .form-layout .form-group textarea[type="search"], .form-layout .form-group .realty-search .btn-search textarea[type="search"], .realty-search .btn-search .form-layout .form-group .select-custom-box .text[type="search"], .form-layout .form-group .select-custom-box .realty-search .btn-search .text[type="search"] {
+  width: 100%;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  font-size: 18px;
+}
+
+.realty-search .btn-search input[type="search"]:focus, .realty-search .btn-search .form-layout .form-group textarea[type="search"]:focus, .form-layout .form-group .realty-search .btn-search textarea[type="search"]:focus, .realty-search .btn-search .form-layout .form-group .select-custom-box .text[type="search"]:focus, .form-layout .form-group .select-custom-box .realty-search .btn-search .text[type="search"]:focus {
+  outline: none;
+}
+
+.realty-search .btn-search button {
+  font-size: 18px;
+  float: right;
+  min-width: auto;
+  min-height: auto;
+  margin: auto;
+}
+
+.realty-search .btn-search input::-webkit-input-placeholder, .realty-search .btn-search .form-layout .form-group textarea::-webkit-input-placeholder, .form-layout .form-group .realty-search .btn-search textarea::-webkit-input-placeholder, .realty-search .btn-search .form-layout .form-group .select-custom-box .text::-webkit-input-placeholder, .form-layout .form-group .select-custom-box .realty-search .btn-search .text::-webkit-input-placeholder,
+.realty-search .btn-search textarea::-webkit-input-placeholder {
+  color: #828282;
+  opacity: 1;
+}
+
+.realty-search .btn-search input:-ms-input-placeholder, .realty-search .btn-search .form-layout .form-group textarea:-ms-input-placeholder, .form-layout .form-group .realty-search .btn-search textarea:-ms-input-placeholder, .realty-search .btn-search .form-layout .form-group .select-custom-box .text:-ms-input-placeholder, .form-layout .form-group .select-custom-box .realty-search .btn-search .text:-ms-input-placeholder,
+.realty-search .btn-search textarea:-ms-input-placeholder {
+  color: #828282;
+  opacity: 1;
+}
+
+.realty-search .btn-search input::-moz-placeholder, .realty-search .btn-search .form-layout .form-group textarea::-moz-placeholder, .form-layout .form-group .realty-search .btn-search textarea::-moz-placeholder, .realty-search .btn-search .form-layout .form-group .select-custom-box .text::-moz-placeholder, .form-layout .form-group .select-custom-box .realty-search .btn-search .text::-moz-placeholder,
+.realty-search .btn-search textarea::-moz-placeholder {
+  color: #828282;
+  opacity: 1;
+}
+
+.realty-search .btn-search input:-moz-placeholder, .realty-search .btn-search .form-layout .form-group textarea:-moz-placeholder, .form-layout .form-group .realty-search .btn-search textarea:-moz-placeholder, .realty-search .btn-search .form-layout .form-group .select-custom-box .text:-moz-placeholder, .form-layout .form-group .select-custom-box .realty-search .btn-search .text:-moz-placeholder,
+.realty-search .btn-search textarea:-moz-placeholder {
+  color: #828282;
+  opacity: 1;
+}
+
+@media (max-width: 767.98px) {
+  .realty-search .btn-search input::-webkit-input-placeholder, .realty-search .btn-search .form-layout .form-group textarea::-webkit-input-placeholder, .form-layout .form-group .realty-search .btn-search textarea::-webkit-input-placeholder, .realty-search .btn-search .form-layout .form-group .select-custom-box .text::-webkit-input-placeholder, .form-layout .form-group .select-custom-box .realty-search .btn-search .text::-webkit-input-placeholder,
+  .realty-search .btn-search textarea::-webkit-input-placeholder {
+    color: transparent;
+    opacity: 1;
+  }
+  .realty-search .btn-search input:-ms-input-placeholder, .realty-search .btn-search .form-layout .form-group textarea:-ms-input-placeholder, .form-layout .form-group .realty-search .btn-search textarea:-ms-input-placeholder, .realty-search .btn-search .form-layout .form-group .select-custom-box .text:-ms-input-placeholder, .form-layout .form-group .select-custom-box .realty-search .btn-search .text:-ms-input-placeholder,
+  .realty-search .btn-search textarea:-ms-input-placeholder {
+    color: transparent;
+    opacity: 1;
+  }
+  .realty-search .btn-search input::-moz-placeholder, .realty-search .btn-search .form-layout .form-group textarea::-moz-placeholder, .form-layout .form-group .realty-search .btn-search textarea::-moz-placeholder, .realty-search .btn-search .form-layout .form-group .select-custom-box .text::-moz-placeholder, .form-layout .form-group .select-custom-box .realty-search .btn-search .text::-moz-placeholder,
+  .realty-search .btn-search textarea::-moz-placeholder {
+    color: transparent;
+    opacity: 1;
+  }
+  .realty-search .btn-search input:-moz-placeholder, .realty-search .btn-search .form-layout .form-group textarea:-moz-placeholder, .form-layout .form-group .realty-search .btn-search textarea:-moz-placeholder, .realty-search .btn-search .form-layout .form-group .select-custom-box .text:-moz-placeholder, .form-layout .form-group .select-custom-box .realty-search .btn-search .text:-moz-placeholder,
+  .realty-search .btn-search textarea:-moz-placeholder {
+    color: transparent;
+    opacity: 1;
+  }
+}
+
+.realty-search button {
+  display: inline-block;
+  font-weight: 400;
+  line-height: 1.5;
+  text-align: center;
+  text-decoration: none;
+  vertical-align: middle;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+      user-select: none;
+  font-size: 18px;
+  border-radius: 100px;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  border: 0;
+  font-weight: bold;
+  min-width: 211px;
+  min-height: 52px;
+  margin: 11px 7px;
+  margin-bottom: 0;
 }
 
 .list-posts {
@@ -3389,6 +3565,11 @@ footer #k13 a:hover {
           box-shadow: 0px 8px 22.56px 1.44px rgba(2, 4, 0, 0.14);
 }
 
+.btn-color-1:hover {
+  background-color: #fbe9cc;
+  color: #ed8f01;
+}
+
 .btn-color-2 {
   background-color: #282828;
   border-radius: 100px;
@@ -3398,6 +3579,11 @@ footer #k13 a:hover {
   font-weight: bold;
   -webkit-box-shadow: 0px 8px 22.56px 1.44px rgba(2, 4, 0, 0.14);
           box-shadow: 0px 8px 22.56px 1.44px rgba(2, 4, 0, 0.14);
+}
+
+.btn-color-2:hover {
+  background-color: #fbe9cc;
+  color: #282828;
 }
 
 .btn-color-3 {
@@ -3411,6 +3597,11 @@ footer #k13 a:hover {
           box-shadow: 0px 8px 22.56px 1.44px rgba(2, 4, 0, 0.14);
 }
 
+.btn-color-3:hover {
+  background-color: #fbe9cc;
+  color: #9b4a14;
+}
+
 .btn-color-4 {
   background-color: #333333;
   border-radius: 100px;
@@ -3422,15 +3613,9 @@ footer #k13 a:hover {
           box-shadow: 0px 8px 22.56px 1.44px rgba(2, 4, 0, 0.14);
 }
 
-.btn-color-5 {
-  background-color: #282828;
-  border-radius: 100px;
-  color: white;
-  font-size: 18px;
-  text-transform: uppercase;
-  font-weight: bold;
-  -webkit-box-shadow: 0px 8px 22.56px 1.44px rgba(2, 4, 0, 0.14);
-          box-shadow: 0px 8px 22.56px 1.44px rgba(2, 4, 0, 0.14);
+.btn-color-4:hover {
+  background-color: #fbe9cc;
+  color: #333333;
 }
 
 @media (min-width: 1200px) {
