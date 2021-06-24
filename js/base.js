@@ -317,11 +317,13 @@ function menuFixedOnScroll() {
         if(nav.classList.contains('white-nav'))
         {
             if (windowTop > (navHeight+500)) {
+                nav.style.backgroundColor= "white";
                 nav.classList.add('nav-small');
-                wrapper.style.paddingTop = navHeight + 'px';
+                
             } else {
+                nav.style.backgroundColor= "transparent";
                 nav.classList.remove('nav-small');
-                wrapper.style.paddingTop = 0;
+             
             }
         }
         else{

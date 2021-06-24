@@ -758,13 +758,11 @@ header {
     left: 0;
     right: 0;
     z-index: 999;
-    background-color: $color-4;
+    // background-color: $color-4;
     &.white-nav {
         background-color: white;
 
         box-shadow: 0px 8px 22.56px 1.44px rgba(2, 4, 0, 0.14);
-
-        // height: 66px;
 
         .navbar {
             padding: 33px 0;
@@ -787,6 +785,19 @@ header {
                             color: $color-1;
                         }
                     }
+                }
+            }
+        }
+
+        @include media-down(sm) {
+            background-color: transparent;
+            position: absolute;
+            box-shadow: none;
+
+            .navbar {
+                padding: 0;
+                .logo {
+                    display: block;
                 }
             }
         }
@@ -1012,7 +1023,7 @@ header {
         @include prefix(box-shadow, 0px -2px 22px -5px rgba(0, 0, 0, 0.75), webkit moz o ms);
         .navbar {
             width: auto;
-            padding: 27.6666666667px 0;
+            // padding: 27.6666666667px 0;
             .logo {
                 img {
                     width: 139.2px;
@@ -2804,8 +2815,8 @@ footer {
         justify-content: center;
         text-align: left;
         z-index: 3;
-        
-        img{
+
+        img {
             position: absolute;
             z-index: -1;
             top: 50%;
@@ -2815,7 +2826,6 @@ footer {
             @include media-down(sm) {
                 display: none;
             }
-        
         }
         .mobile-text {
             width: 100%;
@@ -3396,8 +3406,7 @@ a,
 button {
     &:disabled,
     &.disabled {
-        opacity: .5;
+        opacity: 0.5;
         pointer-events: none;
-
     }
 }

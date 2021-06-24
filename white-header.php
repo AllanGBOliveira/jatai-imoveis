@@ -36,7 +36,7 @@
 </head>
 
 <body>
-<section class="banner" role="banner">
+<section class="banner d-none d-sm-block" role="banner">
         <div class="swiper-banner swiper-container">
             
             <div class="swiper-wrapper">
@@ -120,3 +120,28 @@
                 </li>
             </ul>
         </div>
+
+        <section class="banner d-block d-sm-none" role="banner">
+        <div class="swiper-banner swiper-container">
+            
+            <div class="swiper-wrapper">
+                <a class="swiper-slide" href="#">
+                    <picture>
+                        <source media="(max-width: 767px)" data-srcset="imgs/banners/banner-01-m.jpg">
+                        <img data-src="imgs/banners/Layer 1.png" class="img-cover swiper-lazy" alt="Banner 01">
+                    </picture>
+                    <div class="swiper-lazy-preloader"></div>
+                </a>
+                <a class="swiper-slide" href="#">
+                    <picture>
+                        <source media="(max-width: 767px)" data-srcset="imgs/banners/banner-02-m.jpg">
+                        <img data-src="imgs/banners/Layer 2.png" class="img-cover swiper-lazy" alt="Banner 02">
+                    </picture>
+                    <div class="swiper-lazy-preloader"></div>
+                </a>
+            </div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+            <!-- <div class="swiper-pagination"></div> -->
+        </div>
+    </section>
