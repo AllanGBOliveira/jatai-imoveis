@@ -760,11 +760,12 @@ header {
     z-index: 999;
     // background-color: $color-4;
     &.white-nav {
-        background-color: white;
+       
 
         box-shadow: 0px 8px 22.56px 1.44px rgba(2, 4, 0, 0.14);
 
         .navbar {
+            background-color: white;
             padding: 33px 0;
             .container {
                 justify-content: center;
@@ -808,7 +809,7 @@ header {
 
         border: none;
         min-height: auto;
-        background-color: transparent;
+        background-color: $color-2;
         > .container {
             // justify-content: space-evenly;
 

@@ -49,7 +49,8 @@
                 </a>
                 <a class="swiper-slide" href="#">
                     <picture>
-                        <source media="(max-width: 767px)" data-srcset="imgs/banners/banner-02-m.jpg">
+                        <source media="(max-width: 767px)" data-srcset="imgs/banners/baner-02-m.png
+                        ">
                         <img data-src="imgs/banners/Layer 2.png" class="img-cover swiper-lazy" alt="Banner 02">
                     </picture>
                     <div class="swiper-lazy-preloader"></div>
@@ -134,7 +135,8 @@
                 </a>
                 <a class="swiper-slide" href="#">
                     <picture>
-                        <source media="(max-width: 767px)" data-srcset="imgs/banners/banner-02-m.jpg">
+                        <source media="(max-width: 767px)" data-srcset="imgs/banners/baner-02-m.png
+                        ">
                         <img data-src="imgs/banners/Layer 2.png" class="img-cover swiper-lazy" alt="Banner 02">
                     </picture>
                     <div class="swiper-lazy-preloader"></div>
