@@ -644,39 +644,47 @@ body {
     .swiper-button {
         &-prev,
         &-next {
-            color: $color-2;
-            height: 100%;
+            filter: drop-shadow(0px 0px 15px rgba(0, 0, 0, 0.3));
+            color: rgba($color: white, $alpha: 0.5);
+            height: auto;
             margin: 0;
-            min-width: 48px;
-            top: 0;
-            width: 10%;
+            min-width: auto;
+            min-width: auto;
+            width: auto;
+            top: auto;
+            left: auto;
+            bottom: 14px;
+            // top: 70%;
             @include transition(all, 0.3, ease);
             &:after {
-                font-family: $icon;
-                font-weight: 900;
-                display: none;
+                font-family: $icomoon-font-family;
+                font-size: 31px;
             }
             svg {
-                font-size: 48px;
+                font-size: 31px;
             }
             &.swiper-button-disabled {
                 opacity: 0.5;
                 pointer-events: initial;
             }
             &:hover {
-                color: $color-1;
+                color: rgba($color: white, $alpha: 0.9);
+            }
+
+            @include media-down(sm) {
+                display: none;
             }
         }
         &-prev {
-            left: 0;
+            right: 345px;
             &:after {
-                content: "\f104";
+                content: "\e900";
             }
         }
         &-next {
-            right: 0;
+            right: 300px;
             &:after {
-                content: "\f105";
+                content: "\e901";
             }
         }
     }
@@ -751,9 +759,42 @@ header {
     right: 0;
     z-index: 999;
     background-color: $color-4;
+    &.white-nav {
+        background-color: white;
+
+        box-shadow: 0px 8px 22.56px 1.44px rgba(2, 4, 0, 0.14);
+
+        // height: 66px;
+
+        .navbar {
+            padding: 33px 0;
+            .container {
+                justify-content: center;
+            }
+
+            .logo {
+                display: none;
+            }
+
+            .nav {
+                > li {
+                    > a {
+                        color: $font-color;
+
+                        &:hover,
+                        &:active,
+                        &.active {
+                            color: $color-1;
+                        }
+                    }
+                }
+            }
+        }
+    }
     .navbar {
         width: 100%;
         padding: 41.5px 0;
+
         border: none;
         min-height: auto;
         background-color: transparent;
@@ -1447,24 +1488,21 @@ footer {
 
 //------------------------------------------------------------------------HOME------------------------------------------------------------------------//
 
-#home {
-    .banner {
-        .swiper-banner {
-            .swiper-slide {
-                height: 500px;
-            }
+.banner {
+    .swiper-banner {
+        .swiper-slide {
+            height: 500px;
         }
     }
 }
 
 @include media-down(lg) {
     // Desktops
-    #home {
-        .banner {
-            .swiper-banner {
-                .swiper-slide {
-                    height: 400px;
-                }
+
+    .banner {
+        .swiper-banner {
+            .swiper-slide {
+                height: 400px;
             }
         }
     }
@@ -1472,12 +1510,11 @@ footer {
 
 @include media-down(md) {
     // Tablets
-    #home {
-        .banner {
-            .swiper-banner {
-                .swiper-slide {
-                    height: 300px;
-                }
+
+    .banner {
+        .swiper-banner {
+            .swiper-slide {
+                height: 300px;
             }
         }
     }
@@ -1485,12 +1522,11 @@ footer {
 
 @include media-down(sm) {
     // Large Phones
-    #home {
-        .banner {
-            .swiper-banner {
-                .swiper-slide {
-                    height: 820px;
-                }
+
+    .banner {
+        .swiper-banner {
+            .swiper-slide {
+                height: 820px;
             }
         }
     }
@@ -1498,12 +1534,11 @@ footer {
 
 @include media-only(xs) {
     // Phones
-    #home {
-        .banner {
-            .swiper-banner {
-                .swiper-slide {
-                    height: 540px;
-                }
+
+    .banner {
+        .swiper-banner {
+            .swiper-slide {
+                height: 540px;
             }
         }
     }
@@ -2760,6 +2795,7 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
 
     .container {
         max-width: 699px;
@@ -2767,6 +2803,20 @@ footer {
         flex-wrap: wrap;
         justify-content: center;
         text-align: left;
+        z-index: 3;
+        
+        img{
+            position: absolute;
+            z-index: -1;
+            top: 50%;
+            left: 50%;
+            transform: translateY(-60%) translateX(147%);
+
+            @include media-down(sm) {
+                display: none;
+            }
+        
+        }
         .mobile-text {
             width: 100%;
             margin-bottom: 5px;
@@ -3313,5 +3363,41 @@ $i: 1;
 .container {
     @include media-up(xl) {
         max-width: 1140px;
+    }
+}
+
+[class^="icon-"],
+[class*=" icon-"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: "#{$icomoon-font-family}" !important;
+    // speak: never;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+.icon-exagon-arrow-left1 {
+    &:before {
+        content: $icon-exagon-arrow-left1;
+    }
+}
+.icon-exagon-arrow-right {
+    &:before {
+        content: $icon-exagon-arrow-right;
+    }
+}
+
+a,
+button {
+    &:disabled,
+    &.disabled {
+        opacity: .5;
+        pointer-events: none;
+
     }
 }

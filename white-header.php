@@ -36,7 +36,31 @@
 </head>
 
 <body>
-    <header id="header">
+<section class="banner" role="banner">
+        <div class="swiper-banner swiper-container">
+            
+            <div class="swiper-wrapper">
+                <a class="swiper-slide" href="#">
+                    <picture>
+                        <source media="(max-width: 767px)" data-srcset="imgs/banners/banner-01-m.jpg">
+                        <img data-src="imgs/banners/Layer 1.png" class="img-cover swiper-lazy" alt="Banner 01">
+                    </picture>
+                    <div class="swiper-lazy-preloader"></div>
+                </a>
+                <a class="swiper-slide" href="#">
+                    <picture>
+                        <source media="(max-width: 767px)" data-srcset="imgs/banners/banner-02-m.jpg">
+                        <img data-src="imgs/banners/Layer 2.png" class="img-cover swiper-lazy" alt="Banner 02">
+                    </picture>
+                    <div class="swiper-lazy-preloader"></div>
+                </a>
+            </div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+            <!-- <div class="swiper-pagination"></div> -->
+        </div>
+    </section>
+    <header id="header" class="white-nav">
         <button class="skip-link fixed-top" id="skipForContent" onClick="skipLinkMain()">Pular para o conteúdo
             principal</button>
         <nav class="navbar navbar-expand compensate-for-scrollbar">
@@ -51,7 +75,7 @@
                     <li id="#register"><a href="contact.php">Cadastre Seu
                             Imóvel</a></li>
                     <li id="#contact"><a href="contact.php">Entre em Contato</a></li>
-                    <li id="#client" ><a href="contact.php">Área do Cliente</a></li>
+                    <li id="#client" ><a  href="#" class="disabled" >Área do Cliente</a></li>
                 </ul>
 
                 <button id="menu-toggle" onClick="toggleMenu()" aria-expanded="false" aria-label="Abrir menu lateral">
@@ -80,7 +104,7 @@
                 <li><a href="blog.php">Nosso Catálogo</a></li>
                 <li><a href="contact.php">Cadastre Seu Imóvel</a></li>
                 <li><a href="contact.php">Entre em Contato</a></li>
-                <li><a href="contact.php">Área do Cliente</a></li>
+                <li><a  href="contact.php" class="disabled">Área do Cliente</a></li>
                 <li class="social">
                     <a href="https://facebook.com/" title="Facebook" target="_blank" rel="noreferrer"
                         aria-label="Acesse nossa página no Facebook"><i class="fab fa-facebook-square"></i></a>

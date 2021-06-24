@@ -98,25 +98,7 @@
         </div>
 </main>
 
-<div class="realty-search">
-    <div class="container">
-        <div class="mobile-text d-block d-sm-none">
-            <p>Digite aqui o imóvel que você
-            </p>
-            <p>procura ou código do imóvel</p>
-        </div>
-        <form class="btn-search" action="search.php" method="GET" role="search">
-            <input type="search" id="search-mobile" name="search"
-                placeholder="Digite aqui o imóvel que você procura ou código do imóvel" aria-label="Pesquisar"
-                required />
-            <button type="submit" aria-label="Buscar"><i class="fas fa-search"></i></button>
-        </form>
-
-        <button type="button" class=" btn-color-4">quero comprar</button>
-        <button type="button" class=" btn-color-3">quero alugar</button>
-    </div>
-
-</div>
+<?php include('realty-search.php'); ?>
 
 <script defer
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAs5CY-4vu-pytYixd2wGvBdQJf1rC9bns&callback=initMap"></script>

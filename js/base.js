@@ -314,14 +314,27 @@ function menuFixedOnScroll() {
     let windowTop = document.documentElement.scrollTop;
     const nav = document.getElementById('header'),
         wrapper = document.getElementById('wrapper');
+        if(nav.classList.contains('white-nav'))
+        {
+            if (windowTop > (navHeight+500)) {
+                nav.classList.add('nav-small');
+                wrapper.style.paddingTop = navHeight + 'px';
+            } else {
+                nav.classList.remove('nav-small');
+                wrapper.style.paddingTop = 0;
+            }
+        }
+        else{
+            if (windowTop > navHeight) {
+                nav.classList.add('nav-small');
+                wrapper.style.paddingTop = navHeight + 'px';
+            } else {
+                nav.classList.remove('nav-small');
+                wrapper.style.paddingTop = 0;
+            }
+        }
 
-    if (windowTop > navHeight) {
-        nav.classList.add('nav-small');
-        wrapper.style.paddingTop = navHeight + 'px';
-    } else {
-        nav.classList.remove('nav-small');
-        wrapper.style.paddingTop = 0;
-    }
+   
 }
 
 window.addEventListener('scroll', menuFixedOnScroll);
@@ -572,3 +585,4 @@ jQuery(window).on('load resize', function() {
         vidRescale();
     }
 });
+
