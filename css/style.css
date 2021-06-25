@@ -844,12 +844,12 @@ header.white-nav .navbar .nav > li > a:hover, header.white-nav .navbar .nav > li
 
 @media (max-width: 767.98px) {
   header.white-nav {
-    background-color: transparent;
     position: absolute;
     -webkit-box-shadow: none;
             box-shadow: none;
   }
   header.white-nav .navbar {
+    background-color: transparent;
     padding: 0;
   }
   header.white-nav .navbar .logo {
@@ -2575,7 +2575,7 @@ footer #k13 a:hover {
 }
 
 .form-layout {
-  color: #f7fcf6;
+  color: #2d2d2d;
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
@@ -2583,25 +2583,25 @@ footer #k13 a:hover {
 
 .form-layout input::-webkit-input-placeholder, .form-layout .form-group textarea::-webkit-input-placeholder, .form-layout .form-group .select-custom-box .text::-webkit-input-placeholder,
 .form-layout textarea::-webkit-input-placeholder {
-  color: #f7fcf6;
+  color: #2d2d2d;
   opacity: 1;
 }
 
 .form-layout input:-ms-input-placeholder, .form-layout .form-group textarea:-ms-input-placeholder, .form-layout .form-group .select-custom-box .text:-ms-input-placeholder,
 .form-layout textarea:-ms-input-placeholder {
-  color: #f7fcf6;
+  color: #2d2d2d;
   opacity: 1;
 }
 
 .form-layout input::-moz-placeholder, .form-layout .form-group textarea::-moz-placeholder, .form-layout .form-group .select-custom-box .text::-moz-placeholder,
 .form-layout textarea::-moz-placeholder {
-  color: #f7fcf6;
+  color: #2d2d2d;
   opacity: 1;
 }
 
 .form-layout input:-moz-placeholder, .form-layout .form-group textarea:-moz-placeholder, .form-layout .form-group .select-custom-box .text:-moz-placeholder,
 .form-layout textarea:-moz-placeholder {
-  color: #f7fcf6;
+  color: #2d2d2d;
   opacity: 1;
 }
 
@@ -2621,9 +2621,8 @@ footer #k13 a:hover {
 }
 
 .form-layout .form-group input, .form-layout .form-group textarea, .form-layout .form-group .select-custom-box .text {
-  border: 2px solid #f7fcf6;
   background-color: transparent;
-  border-radius: 0;
+  border: 2px solid #a3a3a3;
   color: #f7fcf6;
   height: 38px;
   padding: 5px 15px;
@@ -2695,7 +2694,8 @@ footer #k13 a:hover {
 
 .form-layout .form-group .attachment {
   margin-bottom: 0;
-  width: 100%;
+  min-width: 266px;
+  min-height: 258px;
 }
 
 .form-layout .form-group .attachment label {
@@ -2712,31 +2712,46 @@ footer #k13 a:hover {
 }
 
 .form-layout .form-group .attachment .text {
-  border: 2px solid #ed8f01;
+  background-color: #e0e0e0;
+  border-radius: 7px;
   color: #2d2d2d;
-  display: block;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   font-weight: normal;
-  height: 38px;
   overflow: hidden;
-  padding: 5px 35px 7px 15px;
-  width: 100%;
-  word-wrap: anywhere;
+  min-width: 266px;
+  min-height: 258px;
   position: relative;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  border: 1px solid transparent;
+  -webkit-transition: all .2s ease;
+  transition: all .2s ease;
 }
 
-.form-layout .form-group .attachment .text:after {
-  font-family: "Font Awesome 5 Free";
-  content: "\f0c6";
-  font-weight: 900;
-  display: none;
+.form-layout .form-group .attachment .text p {
+  color: #373737;
+  font-size: 18px;
+  line-height: 18px;
+  text-transform: uppercase;
+  font-weight: bold;
 }
 
 .form-layout .form-group .attachment .text svg {
-  color: #ed8f01;
-  font-size: 20px;
-  position: absolute;
-  bottom: 8px;
-  right: 5px;
+  font-size: 26px;
+  top: 50%;
+  right: 50%;
+  color: #373737;
+  margin: 0 10px;
 }
 
 .form-layout .form-group .attachment input, .form-layout .form-group .attachment textarea, .form-layout .form-group .attachment .select-custom-box .text, .form-layout .form-group .select-custom-box .attachment .text {
@@ -2752,11 +2767,25 @@ footer #k13 a:hover {
 }
 
 .form-layout .form-group .attachment input:focus + .text, .form-layout .form-group .attachment textarea:focus + .text, .form-layout .form-group .attachment .select-custom-box .text:focus + .text, .form-layout .form-group .select-custom-box .attachment .text:focus + .text {
-  outline: 2px solid #555;
+  border-color: #ed8f01;
 }
 
 .form-layout .form-group .attachment input.error + .text, .form-layout .form-group .attachment textarea.error + .text, .form-layout .form-group .attachment .select-custom-box .error.text + .text, .form-layout .form-group .select-custom-box .attachment .error.text + .text {
   border-color: #dc3545;
+}
+
+.form-layout .form-group .attachment input:hover + .text, .form-layout .form-group .attachment textarea:hover + .text, .form-layout .form-group .attachment .select-custom-box .text:hover + .text, .form-layout .form-group .select-custom-box .attachment .text:hover + .text {
+  background-color: #ed8f01;
+  -webkit-box-shadow: 0px 8px 22.56px 1.44px rgba(2, 4, 0, 0.14);
+          box-shadow: 0px 8px 22.56px 1.44px rgba(2, 4, 0, 0.14);
+}
+
+.form-layout .form-group .attachment input:hover + .text svg, .form-layout .form-group .attachment textarea:hover + .text svg, .form-layout .form-group .attachment .select-custom-box .text:hover + .text svg, .form-layout .form-group .select-custom-box .attachment .text:hover + .text svg,
+.form-layout .form-group .attachment input:hover + .text p,
+.form-layout .form-group .attachment textarea:hover + .text p,
+.form-layout .form-group .attachment .select-custom-box .text:hover + .text p,
+.form-layout .form-group .select-custom-box .attachment .text:hover + .text p {
+  color: white;
 }
 
 .form-layout .form-group .password {
@@ -3728,5 +3757,35 @@ button:disabled,
 button.disabled {
   opacity: 0.5;
   pointer-events: none;
+}
+
+#register .container {
+  padding-top: 34px;
+  padding-bottom: 246px;
+}
+
+@media (max-width: 767.98px) {
+  #register .container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+#register .container .title {
+  line-height: 30px;
+  font-weight: normal;
+  font-size: 16px;
+  color: #2d2d2d;
+  text-transform: none;
+  padding: 0;
+  margin-bottom: 26px;
 }
 /*# sourceMappingURL=style.css.map */

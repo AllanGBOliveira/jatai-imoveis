@@ -760,8 +760,6 @@ header {
     z-index: 999;
     // background-color: $color-4;
     &.white-nav {
-       
-
         box-shadow: 0px 8px 22.56px 1.44px rgba(2, 4, 0, 0.14);
 
         .navbar {
@@ -791,11 +789,11 @@ header {
         }
 
         @include media-down(sm) {
-            background-color: transparent;
             position: absolute;
             box-shadow: none;
 
             .navbar {
+                background-color: transparent;
                 padding: 0;
                 .logo {
                     display: block;
@@ -2406,8 +2404,8 @@ footer {
 //---------------------------------------------------------------------FORM LAYOUT---------------------------------------------------------------------//
 
 .form-layout {
-    color: #f7fcf6;
-    @include placeholder(#f7fcf6);
+    color: $font-color;
+    @include placeholder($font-color);
     appearance: none;
 
     .form-group {
@@ -2422,11 +2420,8 @@ footer {
             color: #f7fcf6;
         }
         input {
-            border: 2px solid #f7fcf6;
-
             background-color: transparent;
-
-            border-radius: 0;
+            border: 2px solid #a3a3a3;
             color: #f7fcf6;
             height: 38px;
             padding: 5px 15px;
@@ -2489,7 +2484,8 @@ footer {
         }
         .attachment {
             margin-bottom: 0;
-            width: 100%;
+            min-width: 266px;
+            min-height: 258px;
             label {
                 color: $color-1;
                 display: block;
@@ -2502,28 +2498,36 @@ footer {
                 }
             }
             .text {
-                border: 2px solid $color-1;
+                background-color: #e0e0e0;
+
+                border-radius: 7px;
                 color: $font-color;
-                display: block;
+                display: flex;
                 font-weight: normal;
-                height: 38px;
                 overflow: hidden;
-                padding: 5px 35px 7px 15px;
-                width: 100%;
-                word-wrap: anywhere;
+                min-width: 266px;
+                min-height: 258px;
                 position: relative;
-                &:after {
-                    font-family: $icon;
-                    content: "\f0c6";
-                    font-weight: 900;
-                    display: none;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                border: 1px solid transparent;
+                transition: all .2s ease;
+
+                p {
+                    color: #373737;
+                    font-size: 18px;
+                    line-height: 18px;
+                    text-transform: uppercase;
+                    font-weight: bold;
                 }
+
                 svg {
-                    color: $color-1;
-                    font-size: 20px;
-                    position: absolute;
-                    bottom: 8px;
-                    right: 5px;
+                    font-size: 26px;
+                    top: 50%;
+                    right: 50%;
+                    color: #373737;
+                    margin: 0 10px;
                 }
             }
             input {
@@ -2536,14 +2540,29 @@ footer {
                 opacity: 0;
                 padding: 0;
                 width: 0;
+              
+
                 &:focus {
                     + .text {
-                        outline: 2px solid #555;
+                        border-color: $color-1;
                     }
                 }
                 &.error {
                     + .text {
                         border-color: $danger;
+                    }
+                }
+                &:hover {
+                    + .text {
+                        background-color: $color-1;
+                        box-shadow: 0px 8px 22.56px 1.44px rgba(2, 4, 0 , .14);
+                        svg,
+                        p {
+                            color: white;
+                         
+                        
+                        
+                        }
                     }
                 }
             }
@@ -3376,6 +3395,7 @@ $i: 1;
         max-width: 1140px;
     }
 }
+//----------------------------------------------------------------------ICONMOON FONTS---------------------------------------------------------------------//
 
 [class^="icon-"],
 [class*=" icon-"] {
@@ -3409,5 +3429,29 @@ button {
     &.disabled {
         opacity: 0.5;
         pointer-events: none;
+    }
+}
+
+//----------------------------------------------------------------------REGISTER---------------------------------------------------------------------//
+// a3a3a3
+#register {
+    .container {
+        padding-top: 34px;
+        padding-bottom: 246px;
+        @include media-down(sm) {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .title {
+            line-height: 30px;
+            font-weight: normal;
+            font-size: 16px;
+            color: $font-color;
+            text-transform: none;
+            padding: 0;
+            margin-bottom: 26px;
+        }
     }
 }

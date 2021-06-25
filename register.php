@@ -1,12 +1,12 @@
 <?php include('header.php'); ?>
 <section>
     <div class="breadcrumb">
-        <span>entre em contato</span>
+        <span>cadastre seu imóvel</span>
     </div>
 </section>
-<main id="contact" tabindex="-1">
+<main id="register" tabindex="-1">
     <div class="container">
-        <div class="row">
+        <!-- <div class="row">
             <div class="col-12 col-md-6">
                 <div class="content">
                     <section class="infos">
@@ -95,13 +95,88 @@
                     </a>
                 </section>
             </div>
-        </div>
+        </div> -->
+
+        <section class="title">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
+                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+                ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
+                fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
+                deserunt mollit anim id est laborum.
+            </p>
+        </section>
+
+        <section class="form-layout">
+            <form action="" method="POST" data-validate class="row">
+                <div class="col col-sm-3 d-flex flex-column justify-content-center">
+                    <div class="form-group  d-flex flex-column justify-content-center">
+                        <label class="attachment" aria-label="Escolha uma imagem">
+                            <input type="file" name="file-1[]" id="file-1"
+                                data-multiple-caption="{count} Imagens Selecionados" multiple required
+                                data-bouncer-target="#file-error-1" />
+                            <div class="text">
+                                <div class="d-flex">
+                                    <i class="fas fa-image"></i>
+                                    <i class="fas fa-plus"></i>
+                                </div>
+                                <p>adicionar imagens</p>
+                            </div>
+                        </label>
+                        <div id="file-error-1"></div>
+                    </div>
+                    <div class="form-group  d-flex flex-column justify-content-center">
+                        <label class="attachment" aria-label="Escolha um vídeo">
+                            <input type="file" name="file-2[]" id="file-2"
+                                data-multiple-caption="{count} Vídeos Selecionados" multiple required
+                                data-bouncer-target="#file-error-2" />
+                            <div class="text">
+                                <div class="d-flex">
+                                    <i class="fas fa-play"></i>
+                                    <i class="fas fa-plus"></i>
+                                </div>
+                                <p>adicionar vídeos</p>
+                            </div>
+                        </label>
+                        <div id="file-error-2"></div>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="form-group">
+                        <input type="text" name="realtyname" id="realtyname" placeholder="Nome do Imóel" minLength="3" autocomplete="realtyname"
+                            required="required" />
+                    </div>
+                    <div class="form-group">
+
+                        <input type="email" name="email" id="email" placeholder="E-mail" autocomplete="email"
+                            required="required" />
+                    </div>
+                    <div class="form-group">
+                        <input type="text" name="subject" id="subject" placeholder="Assunto" minLength="3"
+                            autocomplete="subject" required="required" />
+                    </div>
+
+                    <div class="form-group">
+                        <textarea name="message" id="message" placeholder="Mensagem" required="required"></textarea>
+                    </div>
+
+                    <div
+                        class="form-group d-flex flex-column flex-sm-row flex-md-column flex-lg-row justify-content-between">
+                        <div class="recaptcha">
+                            <div class="g-recaptcha" data-theme="light"
+                                data-sitekey="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI"></div>
+                        </div>
+                        <button type="submit" class="btn-color-1">ENVIAR</button>
+                    </div>
+
+                </div>
+            </form>
+        </section>
     </div>
 </main>
 
 <?php include('realty-search.php'); ?>
 
-<script defer
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAs5CY-4vu-pytYixd2wGvBdQJf1rC9bns&callback=initMap"></script>
+
 
 <?php include('footer.php'); ?>

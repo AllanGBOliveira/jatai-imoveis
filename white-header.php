@@ -73,7 +73,7 @@
                     <li id="#index"><a href="index.php">Home</a></li>
                     <li id="#page"><a href="page.php">Quem Somos</a></li>
                     <li id="#blog" ><a href="blog.php">Nosso Catálogo</a></li>
-                    <li id="#register"><a href="contact.php">Cadastre Seu
+                    <li id="#register"><a href="register.php">Cadastre Seu
                             Imóvel</a></li>
                     <li id="#contact"><a href="contact.php">Entre em Contato</a></li>
                     <li id="#client" ><a  href="#" class="disabled" >Área do Cliente</a></li>
@@ -103,7 +103,7 @@
                 <li><a href="index.php">Home</a></li>
                 <li><a href="page.php">Quem Somos</a></li>
                 <li><a href="blog.php">Nosso Catálogo</a></li>
-                <li><a href="contact.php">Cadastre Seu Imóvel</a></li>
+                <li><a href="register.php">Cadastre Seu Imóvel</a></li>
                 <li><a href="contact.php">Entre em Contato</a></li>
                 <li><a  href="contact.php" class="disabled">Área do Cliente</a></li>
                 <li class="social">

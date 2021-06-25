@@ -48,7 +48,7 @@
                     <li id="#index"><a href="index.php">Home</a></li>
                     <li id="#page"><a href="page.php">Quem Somos</a></li>
                     <li id="#blog" ><a href="blog.php">Nosso Catálogo</a></li>
-                    <li id="#register"><a href="contact.php">Cadastre Seu
+                    <li id="#register"><a href="register.php">Cadastre Seu
                             Imóvel</a></li>
                     <li id="#contact"><a href="contact.php">Entre em Contato</a></li>
                     <li id="#client" ><a href="contact.php">Área do Cliente</a></li>
