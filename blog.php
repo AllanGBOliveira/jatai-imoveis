@@ -1,5 +1,11 @@
 <?php include('header.php'); ?>
-       
+<section>
+    <div class="breadcrumb">
+        <span style="text-transform: none;">Imóveis Urbanos</span>
+		<p id="counter" class="sub-title"></p>
+	
+    </div>
+</section>
 	<main id="blog" tabindex="-1" aria-labelledby="a11y-title">
 		<section class="list-posts">
 			<h1 class="title text-center" id="a11y-title">Blog</h1>
