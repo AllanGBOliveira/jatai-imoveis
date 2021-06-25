@@ -97,7 +97,7 @@
             </div>
         </div> -->
 
-        <section class="title">
+        <section class="desc">
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
                 dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
                 ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
@@ -108,7 +108,7 @@
 
         <section class="form-layout">
             <form action="" method="POST" data-validate class="row">
-                <div class="col col-sm-3 d-flex flex-column justify-content-center">
+                <div class="col col-sm-3 d-flex flex-column ">
                     <div class="form-group  d-flex flex-column justify-content-center">
                         <label class="attachment" aria-label="Escolha uma imagem">
                             <input type="file" name="file-1[]" id="file-1"
@@ -143,7 +143,31 @@
 
                 <div class="col">
                     <div class="form-group">
-                        <input type="text" name="realtyname" id="realtyname" placeholder="Nome do Imóel" minLength="3" autocomplete="realtyname"
+                        <input type="text" name="realtyname" id="realtyname" placeholder="Nome do Imóvel" minLength="3"
+                            autocomplete="realtyname" required="required" />
+                    </div>
+
+                    <div class="form-group">
+                        <input inputmode="numeric" id="price" class="price" placeholder="Preço" autocomplete="price"
+                            name="price" onfocus="maskMoney(this.value)"><br>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" name="localization" id="localization" placeholder="Localização"
+                            autocomplete="localization" required="required" />
+                    </div>
+
+
+                    <div class="form-group">
+                        <textarea name="description" id="description" placeholder="Descrição"
+                            required="required"></textarea>
+                    </div>
+
+                    <p class="title">seus dados</p>
+
+
+                    <div class="form-group">
+
+                        <input type="text" name="name" id="name" placeholder="Nome" minLength="3" autocomplete="name"
                             required="required" />
                     </div>
                     <div class="form-group">
@@ -152,24 +176,33 @@
                             required="required" />
                     </div>
                     <div class="form-group">
-                        <input type="text" name="subject" id="subject" placeholder="Assunto" minLength="3"
-                            autocomplete="subject" required="required" />
-                    </div>
 
-                    <div class="form-group">
-                        <textarea name="message" id="message" placeholder="Mensagem" required="required"></textarea>
+                        <input type="tel" name="tel" id="tel" class="tel-mask" placeholder="Telefone" minLength="14"
+                            autocomplete="tel" required="required" />
                     </div>
 
                     <div
-                        class="form-group d-flex flex-column flex-sm-row flex-md-column flex-lg-row justify-content-between">
+                        class="form-group d-flex justify-content-center flex-wrap">
                         <div class="recaptcha">
                             <div class="g-recaptcha" data-theme="light"
                                 data-sitekey="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI"></div>
                         </div>
-                        <button type="submit" class="btn-color-1">ENVIAR</button>
+                        <!-- <button type="submit" class="btn-color-1">ENVIAR</button> -->
+
+                        <button type="button" class="btn-color-2">quero vender</button>
+                        <button type="button" class="btn-color-3">quero alugar</button>
                     </div>
 
+
+
+
                 </div>
+
+                <!-- <div class="form-group">
+
+                    <input type="email" name="email" id="email" placeholder="E-mail" autocomplete="email"
+                        required="required" />
+                </div> -->
             </form>
         </section>
     </div>

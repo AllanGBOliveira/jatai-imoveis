@@ -397,11 +397,12 @@ body ::-moz-selection {
 }
 
 .title {
-  font-size: 28px;
+  font-size: 18px;
   color: #ed8f01;
   font-weight: 700;
-  padding: 15px 0;
   text-transform: uppercase;
+  margin-top: 22px;
+  margin-bottom: 20px;
 }
 
 .title.white {
@@ -2606,7 +2607,7 @@ footer #k13 a:hover {
 }
 
 .form-layout .form-group {
-  margin-bottom: 20px;
+  margin-bottom: 14px;
   position: relative;
 }
 
@@ -2622,9 +2623,9 @@ footer #k13 a:hover {
 
 .form-layout .form-group input, .form-layout .form-group textarea, .form-layout .form-group .select-custom-box .text {
   background-color: transparent;
-  border: 2px solid #a3a3a3;
-  color: #f7fcf6;
-  height: 38px;
+  border: 3px solid #a3a3a3;
+  color: #2d2d2d;
+  height: 49px;
   padding: 5px 15px;
   width: 100%;
 }
@@ -2654,9 +2655,9 @@ footer #k13 a:hover {
   width: 100%;
   max-width: 100%;
   min-width: 100%;
-  height: 180px;
-  min-height: 100px;
-  max-height: 300px;
+  height: 100%;
+  min-height: 136px;
+  max-height: 336px;
 }
 
 .form-layout .form-group .select-custom-box select {
@@ -2734,8 +2735,8 @@ footer #k13 a:hover {
       -ms-flex-direction: column;
           flex-direction: column;
   border: 1px solid transparent;
-  -webkit-transition: all .2s ease;
-  transition: all .2s ease;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
 }
 
 .form-layout .form-group .attachment .text p {
@@ -3776,10 +3777,11 @@ button.disabled {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+    padding-bottom: 67px;
   }
 }
 
-#register .container .title {
+#register .container .desc {
   line-height: 30px;
   font-weight: normal;
   font-size: 16px;
@@ -3787,5 +3789,51 @@ button.disabled {
   text-transform: none;
   padding: 0;
   margin-bottom: 26px;
+}
+
+#register .container .form-group button {
+  min-width: 211px;
+  min-height: 71px;
+  max-width: 292px;
+  padding: 0;
+}
+
+#register .container .form-group button.btn-color-2 {
+  background-color: #282828;
+}
+
+#register .container .form-group button.btn-color-2:hover {
+  background-color: #fbe9cc;
+  color: #282828;
+}
+
+#register .container .form-group button.btn-color-3 {
+  background-color: #9b4a14;
+}
+
+#register .container .form-group button.btn-color-3:hover {
+  background-color: #fbe9cc;
+  color: #9b4a14;
+}
+
+@media (max-width: 991.98px) {
+  #register .container .form-group .recaptcha {
+    width: 242px;
+    border: 2px solid lightgray;
+    border-radius: 3px;
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+    margin-top: 12px;
+  }
+}
+
+#register .container .form-group:last-child {
+  gap: 10%;
+}
+
+@media (max-width: 767.98px) {
+  #register .container .form-group:last-child {
+    gap: 14px;
+  }
 }
 /*# sourceMappingURL=style.css.map */

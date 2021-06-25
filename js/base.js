@@ -75,8 +75,8 @@ new Swiper('.swiper-gallery-test', {
 
 let hasGallery = document.querySelectorAll('.swiper-gallery').length;
 
-if(hasGallery) {
-    jQuery('.swiper-gallery').each(function(index) {
+if (hasGallery) {
+    jQuery('.swiper-gallery').each(function (index) {
         var sliderGalleryId = 'sliderGallery' + index;
         this.id = sliderGalleryId;
         jQuery('.swiper-gallery')[index].id = sliderGalleryId;
@@ -88,7 +88,7 @@ if(hasGallery) {
             backFocus: false
         });
 
-        jQuery(document).on('click', `${sliderGallery} .swiper-slide-duplicate`, function() {
+        jQuery(document).on('click', `${sliderGallery} .swiper-slide-duplicate`, function () {
             var $slides = jQuery(this).parent().children(`${sliderGallery} .swiper-slide:not(.swiper-slide-duplicate)`).children();
             $slides.eq((jQuery(this).attr('data-swiper-slide-index') || 0) % $slides.length).trigger('click.fb-start', { $trigger: jQuery(this) });
             return false;
@@ -105,20 +105,20 @@ jQuery('[data-fancybox]').fancybox({
 });
 
 jQuery('[data-fancybox="video"]').fancybox({
-    smallBtn : true
+    smallBtn: true
 });
 
 //--Custom Input File-----------------------------------------------------------------------------//
 
-document.querySelectorAll('input[type="file"]').forEach(function(e) {
+document.querySelectorAll('input[type="file"]').forEach(function (e) {
     let label = e.nextElementSibling;
 
-    e.addEventListener('change', function() {
+    e.addEventListener('change', function () {
         let fileName = '';
 
-        if(this.files && this.files.length > 1) {
+        if (this.files && this.files.length > 1) {
             fileName = (this.getAttribute('data-multiple-caption') || '').replace('{count}', this.files.length);
-        } else if(this.value) {
+        } else if (this.value) {
             fileName = this.value.split('\\').pop();
         }
         label.childNodes[1].innerHTML = fileName;
@@ -168,7 +168,7 @@ if (document.querySelector('#state')) {
 
             let options = `<option value="">${labelCityInitialText}</option>`;
             json.forEach(e => {
-                if(e.sigla === selectState.options[selectState.selectedIndex].text) {
+                if (e.sigla === selectState.options[selectState.selectedIndex].text) {
                     e.cidades.forEach(c => {
                         options += `<option value="${c}">${c}</option>`;
                     });
@@ -186,7 +186,7 @@ function loadJSON(path, callback) {
     var xobj = new XMLHttpRequest();
     xobj.overrideMimeType('application/json');
     xobj.open('GET', path, true);
-    xobj.onreadystatechange = function() {
+    xobj.onreadystatechange = function () {
         if (xobj.readyState === 4 && xobj.status === 200) {
             callback(xobj.responseText); // Required use of an anonymous callback as .open will NOT return a value but simply returns undefined in asynchronous mode
         }
@@ -205,6 +205,28 @@ document.querySelectorAll('.tel-mask').forEach(e => {
         ]
     });
 });
+
+function maskMoney(e) {
+    const args = {
+        // afterFormat(e) { console.log('afterFormat', e); },
+        allowNegative: false,
+        // beforeFormat(e) { console.log('beforeFormat', e); },
+        negativeSignAfter: false,
+        prefix: 'R$ ',
+        suffix: '',
+        // fixed: true,
+        fractionDigits: 2,
+        decimalSeparator: ',',
+        thousandsSeparator: '.',
+    }
+
+    e = SimpleMaskMoney.setMask('.price', args);
+}
+
+
+
+
+
 
 //--Forms Validation------------------------------------------------------------------------------//
 
@@ -241,7 +263,7 @@ new Bouncer('[data-validate]', {
 
 //--Checkin and Checkout validation---------------------------------------------------------------//
 
-if(document.querySelector('#checkin')) {
+if (document.querySelector('#checkin')) {
     document.querySelector('#checkin').addEventListener('change', e => {
         let checkout = document.querySelector('#checkout');
 
@@ -256,7 +278,7 @@ if(document.querySelector('#checkin')) {
 function parallax() {
     document.querySelectorAll('.parallax').forEach(e => {
         let yPos = -((window.pageYOffset - e.offsetTop) / e.getAttribute('data-speed'));
-        let bgpos = '50% '+ yPos + 'px';
+        let bgpos = '50% ' + yPos + 'px';
         e.style.backgroundPosition = bgpos;
     });
 }
@@ -314,29 +336,28 @@ function menuFixedOnScroll() {
     let windowTop = document.documentElement.scrollTop;
     const nav = document.getElementById('header'),
         wrapper = document.getElementById('wrapper');
-        if(nav.classList.contains('white-nav'))
-        {
-            if (windowTop > (navHeight+500)) {
-                nav.style.backgroundColor= "white";
-                nav.classList.add('nav-small');
-                
-            } else {
-                nav.style.backgroundColor= "transparent";
-                nav.classList.remove('nav-small');
-             
-            }
-        }
-        else{
-            if (windowTop > navHeight) {
-                nav.classList.add('nav-small');
-                wrapper.style.paddingTop = navHeight + 'px';
-            } else {
-                nav.classList.remove('nav-small');
-                wrapper.style.paddingTop = 0;
-            }
-        }
+    if (nav.classList.contains('white-nav')) {
+        if (windowTop > (navHeight + 500)) {
+            nav.style.backgroundColor = "white";
+            nav.classList.add('nav-small');
 
-   
+        } else {
+            nav.style.backgroundColor = "transparent";
+            nav.classList.remove('nav-small');
+
+        }
+    }
+    else {
+        if (windowTop > navHeight) {
+            nav.classList.add('nav-small');
+            wrapper.style.paddingTop = navHeight + 'px';
+        } else {
+            nav.classList.remove('nav-small');
+            wrapper.style.paddingTop = 0;
+        }
+    }
+
+
 }
 
 window.addEventListener('scroll', menuFixedOnScroll);
@@ -356,18 +377,18 @@ buttonScroll.forEach(trigger => {
 
 //--Collapse--------------------------------------------------------------------------------------//
 
-jQuery('.btn-collapse').click(function() {
+jQuery('.btn-collapse').click(function () {
     jQuery(' .collapse, .collapsed').collapse('hide');
 });
 
 //--Facebook Comment Loading----------------------------------------------------------------------//
 
 let selector = jQuery('.fb-comments');
-let waitForEl = function(selector, callback) {
+let waitForEl = function (selector, callback) {
     if (jQuery(selector).attr('fb-xfbml-state') === 'rendered') {
         callback();
     } else {
-        setTimeout(function() {
+        setTimeout(function () {
             waitForEl(selector, callback);
         }, 100);
     }
@@ -375,7 +396,7 @@ let waitForEl = function(selector, callback) {
 
 selector.before('<span class="loading-comments"></span>');
 
-waitForEl(selector, function() {
+waitForEl(selector, function () {
     jQuery('.loading-comments').remove();
 });
 
@@ -441,7 +462,7 @@ function trapTabKey(e) {
     }
 }
 
-document.addEventListener('keyup', function(e) {
+document.addEventListener('keyup', function (e) {
     if (e.key === 'Escape' && isMenuOpen) {
         toggleMenu();
     }
@@ -459,7 +480,7 @@ function initMap() {
         address = location['data-address'].value,
         map = new google.maps.Map(document.getElementById('map'), {
             zoom: 17,
-            center: {lat: latitude, lng: longitude}
+            center: { lat: latitude, lng: longitude }
         });
 
     //let image = '../content/themes/base/assets/imgs/icon-maps.png',
@@ -472,7 +493,7 @@ function initMap() {
     marker = new google.maps.Marker({
         map: map,
         animation: google.maps.Animation.DROP,
-        position: {lat: latitude, lng: longitude},
+        position: { lat: latitude, lng: longitude },
         icon: icon,
         optimized: false,
         title: title
@@ -480,24 +501,24 @@ function initMap() {
 
     // Box description
     let contentString =
-        '<p style="color: #151E34; text-align: center">'+
-            '<b>'+ title +'</b>'+
-            '<br>' + address +
-            '<br><a href="https://www.google.com/maps/place/'+ address +'" target="_blank">Visualize no Google Maps</a>' +
+        '<p style="color: #151E34; text-align: center">' +
+        '<b>' + title + '</b>' +
+        '<br>' + address +
+        '<br><a href="https://www.google.com/maps/place/' + address + '" target="_blank">Visualize no Google Maps</a>' +
         '</p>';
     let infowindow = new google.maps.InfoWindow({
         content: contentString
     });
 
-    marker.addListener('click', function() {
+    marker.addListener('click', function () {
         infowindow.open(map, marker);
     });
 
     //-----------------------------------------------
 
     let myoverlay = new google.maps.OverlayView();
-    myoverlay.draw = function() {
-        this.getPanes().markerLayer.id='markerLayer';
+    myoverlay.draw = function () {
+        this.getPanes().markerLayer.id = 'markerLayer';
     };
 
     myoverlay.setMap(map);
@@ -505,12 +526,12 @@ function initMap() {
 
 //--Instagram Feed--------------------------------------------------------------------------------//
 
-if($('#instafeed')[0]) {
+if ($('#instafeed')[0]) {
     var instafeed = $('#instafeed');
     $.ajax({
         type: 'GET',
         url: '?getinstagramtoken',
-        success:function() {
+        success: function () {
             $.fn.FCInstagram.accessData = {
                 // accessToken: data.access_token, // Token
                 accessToken: 'IGQVJYRWFUdkJmR1JnbXFZAamJJNzR4OVRHUUNkOEMzMXU1bU5JYmRNYlZAGMUJQYm9RQ25OdDdwWjgwVTY3cTgwTlBETUhVWkEtcV9GLURZAQms0ZAzdRbkRFaDBzc0RjQnNUWklOY0dTUnM5d2dwMmM2bgZDZD'
@@ -520,7 +541,7 @@ if($('#instafeed')[0]) {
                 autoplay: instafeed.data('autoplay'), // Set autoplay video: true/false. Default: false
             });
         },
-        error:function(data) {
+        error: function (data) {
             console.error(`Erro ao recuperar token do instagram: ${JSON.stringify(data.responseJSON)}`);
         }
     });
@@ -528,7 +549,7 @@ if($('#instafeed')[0]) {
 
 //--API Youtube Background Video------------------------------------------------------------------//
 
-if($('#player')[0]) {
+if ($('#player')[0]) {
     var tag = document.createElement('script');
     tag.src = 'https://www.youtube.com/iframe_api';
     var firstScriptTag = document.getElementsByTagName('script')[0];
@@ -540,7 +561,7 @@ if($('#player')[0]) {
 
 // eslint-disable-next-line
 function onYouTubeIframeAPIReady() {
-    var width  = jQuery('.video .player').outerWidth();
+    var width = jQuery('.video .player').outerWidth();
 
     if (width < 992) { // Disable in mobile
         return;
@@ -554,8 +575,8 @@ function onYouTubeIframeAPIReady() {
             controls: 0,
             loop: 1,
             mute: 1,
-            rel : 0,
-            fs : 0,
+            rel: 0,
+            fs: 0,
         },
         events: {
             'onReady': onPlayerReady,
@@ -573,17 +594,17 @@ function vidRescale() {
     var w = jQuery(window).width(),
         h = jQuery(window).height() + 200;
 
-    if (w/h > 16/9) {
-        player.setSize(w, w/16*9);
-        jQuery('.video #player').css({'left': '0'});
+    if (w / h > 16 / 9) {
+        player.setSize(w, w / 16 * 9);
+        jQuery('.video #player').css({ 'left': '0' });
     } else {
-        player.setSize(h/9*16, h);
-        jQuery('.video #player').css({'left': -(jQuery('.video #player').outerWidth()-w)/2});
+        player.setSize(h / 9 * 16, h);
+        jQuery('.video #player').css({ 'left': -(jQuery('.video #player').outerWidth() - w) / 2 });
     }
 }
 
-jQuery(window).on('load resize', function() {
-    if(typeof player !== 'undefined' && jQuery('.video').length) {
+jQuery(window).on('load resize', function () {
+    if (typeof player !== 'undefined' && jQuery('.video').length) {
         vidRescale();
     }
 });

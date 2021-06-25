@@ -117,6 +117,7 @@
 <script src="libs/bouncer-1.4.6.polyfills.min.js"></script>
 <script src="libs/lazysizes-5.3.2.min.js"></script>
 <script src='https://www.google.com/recaptcha/api.js'></script>
+<script src="libs/simple-mask-money.js"></script>
 <script src="js/base.js"></script>
 
 </body>
