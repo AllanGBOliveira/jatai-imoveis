@@ -225,33 +225,6 @@ function maskMoney(e) {
 
 
 
-window.addEventListener("load", function () {
-
-    let counter = document.getElementById("counter");
-    let count = 0;
-
-    for (let index = 0; index < 100; index++) {
-        
-        this.setInterval(() => {
-            counter.innerText = count;
-        }, 1000);
-        count++;
-
-    }
-
-});
-function counter() {
-    let count = 0;
-
-    for (let index = 0; index < 100; index++) {
-        count++;
-
-        console.log(count);
-        alert(count);
-    }
-}
-
-
 
 
 

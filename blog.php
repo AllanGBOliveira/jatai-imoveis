@@ -1,19 +1,22 @@
 <?php include('header.php'); ?>
 <section>
-    <div class="breadcrumb">
-        <span style="text-transform: none;">Imóveis Urbanos</span>
-		<p id="counter" class="sub-title"></p>
-	
-    </div>
+	<div class="breadcrumb">
+		<span style="text-transform: none;">Imóveis Urbanos</span>
+		<p class="sub-title">6.455 imóveis disponíveis</p>
+
+	</div>
 </section>
-	<main id="blog" tabindex="-1" aria-labelledby="a11y-title">
-		<section class="list-posts">
-			<h1 class="title text-center" id="a11y-title">Blog</h1>
-			<div class="container">
-				<div class="skip-link-box">
-					<button class="skip-link" onKeyPress="skipLink(skipPosts)">Pular listagem de categorias</button>
-				</div>
-				<div class="categories d-md-none">
+<main id="blog" tabindex="-1" aria-labelledby="a11y-title">
+	<section class="list-posts">
+
+		<div class="container">
+			<div class="skip-link-box">
+				<button class="skip-link" onKeyPress="skipLink(skipPosts)">Pular listagem de categorias</button>
+
+			</div>
+
+			<div class="row">
+				<div class="categories d-md-none col-12">
 					<label class="select-custom-box" aria-label="Categorias">
 						<select name="categories" id="categories">
 							<option value="">Categorias</option>
@@ -27,242 +30,539 @@
 						</div>
 					</label>
 				</div>
-				<nav class="categories d-none d-md-flex">
-					<h2 id="category-header" class="label">Categorias - </h2>
-					<ul class="list-inline" aria-labelledby="category-header">
-						<li class="list-inline-item">
-							<a href="#" class="category">Categoria 1</a>
-						</li>
-						<li class="list-inline-item">
-							<a href="#" class="category">Categoria 2</a>
-						</li>
-						<li class="list-inline-item">
-							<a href="#" class="category active">Categoria 3</a>
-						</li>
-						<li class="list-inline-item">
-							<a href="#" class="category">Categoria 4</a>
-						</li>
-					</ul>
+				<nav class="categories d-none d-md-block col-4">
+					<form action="">
+						<h2 id="category-header" class="label">Categorias</h2>
+						<ul class="" aria-labelledby="category-header">
+							<!-- <li class="">
+								<a href="#" class="category">Casa</a>
+							</li>
+							<li class="">
+								<a href="#" class="category">Apartamento</a>
+							</li>
+							<li class="">
+								<a href="#" class="category active">Comercial</a>
+							</li>
+							<li class="">
+								<a href="#" class="category">Sobrado</a>
+							</li> -->
+							<li>
+								<input id="casa" type="checkbox" checked="checked">
+								<label for="casa" class="category-check">Casa
+								</label>
+							</li>
+							<li>
+								<input id="apartamento" type="checkbox">
+								<label for="apartamento" class="category-check">Apartamento
+								</label>
+							</li>
+							<li>
+								<input id="comercial" type="checkbox">
+								<label for="comercial" class="category-check">Comercial
+								</label>
+							</li>
+							<li>
+								<input id="sobrado" type="checkbox">
+								<label for="sobrado" class="category-check">Sobrado
+								</label>
+							</li>
+						</ul>
+
+					</form>
+
+					<form action="" class="form-layout">
+
+						<h2 id="category-header" class="label">Filtrar localização</h2>
+						<div class="form-group">
+							<label class="select-custom-box" aria-label="Selecione o Estado">
+								<span class="label d-none">Estado</span>
+								<select name="state" id="state" required="required"
+									data-bouncer-target="#state-error"></select>
+								<div class="text">
+									<span>Estado</span>
+								</div>
+								<div id="state-error"></div>
+							</label>
+						</div>
+						<div class="form-group">
+							<label class="select-custom-box" aria-label="Selecione a Cidade">
+								<span class="label d-none">Cidade</span>
+								<select name="city" id="city" required="required" disabled="disabled"
+									data-bouncer-target="#city-error"></select>
+								<div class="text">
+									<span>Cidade</span>
+								</div>
+								<div id="city-error"></div>
+							</label>
+						</div>
+
+
+						<div class="form-group">
+							<label for="bairro" class="d-none">Bairro</label>
+							<input type="text" name="bairo" id="bairo" placeholder="Bairro" minLength="3"
+								autocomplete="bairro" required="required" />
+						</div>
+					</form>
+
+					<form action="">
+						<h2 id="category-header" class="label">Filtrar preço</h2>
+						<div class="double-slider">
+
+							<input type="range" class="slider" min="0" max="300000" step="50" value="1000"
+								id="min-ranger">
+
+							<input type="range" class="slider max" min="0" max="300000" step="50" value="150000"
+								id="max-ranger">
+							<!-- <label for="customRange2" class="form-label">Example range</label>
+							<input type="range" class="form-range" min="0" max="5" id="customRange2"> -->
+
+							<p style="color: white;" id="min-ranger-value" class="float-start"> </p>
+							<p style="color: white;" id="max-ranger-value" class="float-end"> </p>
+						</div>
+					</form>
+
 				</nav>
-				<div class="row">
-					<div class="item highlight col-12">
-						<div class="row">
-							<a href="single.php" class="col-md-6" aria-hidden="true" tabIndex="-1">
+
+				<div class="row col-12 col-md-6 items">
+					<section class="map skip-link-box col-12 d-none d-sm-block">
+						<button class="skip-link" onKeyPress="skipLink(waze)">Pular mapa</button>
+
+						<div id="map" data-title="K13 Agência Web" data-lat="-25.384988" data-lng="-51.467499"
+							data-address="R. Benjamin Constant, 1499 - Centro, Guarapuava - PR, 85010-190, Brasil">
+						</div>
+						<a id="waze"
+							href="https://www.waze.com/ul?ll=<?= $location['lat'] ?>%2C<?= $location['lng'] ?>&navigate=yes"
+							target="_blank" rel="noreferrer" class="waze" aria-label="Ver a localização pelo Waze"><i
+								class="fab fa-waze"></i>
+							<span>Ver no Waze</span>
+						</a>
+					</section>
+					<div class=" col-12 col-sm-6 col-lg-4">
+						<div class="item">
+							<a href="single.php">
 								<div class="thumb">
 									<figure aria-hidden="true">
-										<img class="img-cover lazyload" data-src="imgs/default.png" alt="Image 00">
+										<img class="img-cover lazyload" data-src="imgs/test/test-01.png" alt="Image 01">
 									</figure>
-									<time class="date absolute" datetime="2021-11-24" aria-label="2021-11-24">24/Nov</time>			
 								</div>
+								<h2 class="title-post">Casa com piscina
+									no Trianon</h2>
+								<p class="local-post">Trianon - Guarapuava</p>
+								<p class="price-post"> R$1.000.000,00</p>
 							</a>
-							<div class="col-md-6">
-								<a href="single.php" id="skipPosts">
-									<h2 class="title-post">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed posuere erat consequat mauris facilisis</h2>
-									<span class="a11y" aria-labelledby="date-0"></span>
-								</a>
-								<time class="date" datetime="2021-11-24" id="date-0">24 de Novembro</time>
-								<div class="abstract d-md-none d-lg-block">
-									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur gravida turpis sit amet ipsum posuere gravida. Nulla convallis ligula et felis imperdiet sodales. Pellentesque dictum</p>
-								</div>
-								<div class="btn-default text-center" aria-hidden="true">
-									<a href="single.php" tabIndex="-1">Ler Matéria</a>
-								</div>
-							</div>
 						</div>
 					</div>
-					<div class="item col-12 col-sm-6 col-lg-4">
-						<a href="single.php">
-							<div class="thumb">
-								<figure aria-hidden="true">
-									<img class="img-cover lazyload" data-src="imgs/test/test-01.jpg" alt="Image 01">
-								</figure>
-								<time class="date absolute" datetime="2021-11-24" aria-label="2021-11-24">24/Nov</time>
-							</div>
-							<h2 class="title-post">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Accusantium, porro.</h2>
-							<span class="a11y" aria-labelledby="date-1"></span>
-						</a>
-						<time class="date" datetime="2021-11-24" id="date-1">24 de Novembro</time>
+					<div class=" col-12 col-sm-6 col-lg-4">
+						<div class="item">
+							<a href="single.php">
+								<div class="thumb">
+									<figure aria-hidden="true">
+										<img class="img-cover lazyload" data-src="imgs/test/test-02.png" alt="Image 01">
+									</figure>
+								</div>
+								<h2 class="title-post">Apartamento Luxo</h2>
+								<p class="local-post">Santana - Guarapuava</p>
+								<p class="price-post"> R$1.000.000,00</p>
+							</a>
+						</div>
 					</div>
-					<div class="item col-12 col-sm-6 col-lg-4">
-						<a href="single.php">
-							<div class="thumb">
-								<figure aria-hidden="true">
-									<img class="img-cover lazyload" data-src="imgs/test/test-02.jpg" alt="Image 02">
-								</figure>
-								<time class="date absolute" datetime="2021-11-24" aria-label="2021-11-24">24/Nov</time>
-							</div>
-							<h2 class="title-post">Lorem ipsum dolor sit amet consectetur adipisicing elit. Est, velit.</h2>
-							<span class="a11y" aria-labelledby="date-2"></span>
-						</a>
-						<time class="date" datetime="2021-11-24" id="date-2">24 de Novembro</time>
+					<div class=" col-12 col-sm-6 col-lg-4">
+						<div class="item">
+							<a href="single.php">
+								<div class="thumb">
+									<figure aria-hidden="true">
+										<img class="img-cover lazyload" data-src="imgs/test/test-01.png" alt="Image 01">
+									</figure>
+								</div>
+								<h2 class="title-post">Casa com piscina
+									no Trianon</h2>
+								<p class="local-post">Trianon - Guarapuava</p>
+								<p class="price-post"> R$1.000.000,00</p>
+							</a>
+						</div>
 					</div>
-					<div class="item col-12 col-sm-6 col-lg-4">
-						<a href="single.php">
-							<div class="thumb">
-								<figure aria-hidden="true">
-									<img class="img-cover lazyload" data-src="imgs/test/test-03.jpg" alt="Image 03">
-								</figure>
-								<time class="date absolute" datetime="2021-11-24" aria-label="2021-11-24">24/Nov</time>
-							</div>
-							<h2 class="title-post">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempore, ducimus.</h2>
-							<span class="a11y" aria-labelledby="date-3"></span>
-						</a>
-						<time class="date" datetime="2021-11-24" id="date-3">24 de Novembro</time>
+					<div class=" col-12 col-sm-6 col-lg-4">
+						<div class="item">
+							<a href="single.php">
+								<div class="thumb">
+									<figure aria-hidden="true">
+										<img class="img-cover lazyload" data-src="imgs/test/test-02.png" alt="Image 01">
+									</figure>
+								</div>
+								<h2 class="title-post">Apartamento Luxo</h2>
+								<p class="local-post">Santana - Guarapuava</p>
+								<p class="price-post"> R$1.000.000,00</p>
+							</a>
+						</div>
 					</div>
-					<div class="item col-12 col-sm-6 col-lg-4">
-						<a href="single.php">
-							<div class="thumb">
-								<figure aria-hidden="true">
-									<img class="img-cover lazyload" data-src="imgs/test/test-04.jpg" alt="Image 04">
-								</figure>
-								<time class="date absolute" datetime="2021-11-24" aria-label="2021-11-24">24/Nov</time>
-							</div>
-							<h2 class="title-post">Lorem ipsum dolor sit amet consectetur adipisicing elit. Est, quasi.</h2>
-							<span class="a11y" aria-labelledby="date-4"></span>
-						</a>
-						<time class="date" datetime="2021-11-24" id="date-4">24 de Novembro</time>
+					<div class=" col-12 col-sm-6 col-lg-4">
+						<div class="item">
+							<a href="single.php">
+								<div class="thumb">
+									<figure aria-hidden="true">
+										<img class="img-cover lazyload" data-src="imgs/test/test-01.png" alt="Image 01">
+									</figure>
+								</div>
+								<h2 class="title-post">Casa com piscina
+									no Trianon</h2>
+								<p class="local-post">Trianon - Guarapuava</p>
+								<p class="price-post"> R$1.000.000,00</p>
+							</a>
+						</div>
 					</div>
-					<div class="item col-12 col-sm-6 col-lg-4">
-						<a href="single.php">
-							<div class="thumb">
-								<figure aria-hidden="true">
-									<img class="img-cover lazyload" data-src="imgs/test/test-05.jpg" alt="Image 05">
-								</figure>
-								<time class="date absolute" datetime="2021-11-24" aria-label="2021-11-24">24/Nov</time>
-							</div>
-							<h2 class="title-post">Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore, recusandae.</h2>
-							<span class="a11y" aria-labelledby="date-5"></span>
-						</a>
-						<time class="date" datetime="2021-11-24" id="date-5">24 de Novembro</time>
+					<div class=" col-12 col-sm-6 col-lg-4">
+						<div class="item">
+							<a href="single.php">
+								<div class="thumb">
+									<figure aria-hidden="true">
+										<img class="img-cover lazyload" data-src="imgs/test/test-02.png" alt="Image 01">
+									</figure>
+								</div>
+								<h2 class="title-post">Apartamento Luxo</h2>
+								<p class="local-post">Santana - Guarapuava</p>
+								<p class="price-post"> R$1.000.000,00</p>
+							</a>
+						</div>
 					</div>
-					<div class="item col-12 col-sm-6 col-lg-4">
-						<a href="single.php">
-							<div class="thumb">
-								<figure aria-hidden="true">
-									<img class="img-cover lazyload" data-src="imgs/test/test-06.jpg" alt="Image 06">
-								</figure>
-								<time class="date absolute" datetime="2021-11-24" aria-label="2021-11-24">24/Nov</time>
-							</div>
-							<h2 class="title-post">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deserunt, culpa.</h2>
-							<span class="a11y" aria-labelledby="date-6"></span>
-						</a>
-						<time class="date" datetime="2021-11-24" id="date-6">24 de Novembro</time>
+					<div class=" col-12 col-sm-6 col-lg-4">
+						<div class="item">
+							<a href="single.php">
+								<div class="thumb">
+									<figure aria-hidden="true">
+										<img class="img-cover lazyload" data-src="imgs/test/test-01.png" alt="Image 01">
+									</figure>
+								</div>
+								<h2 class="title-post">Casa com piscina
+									no Trianon</h2>
+								<p class="local-post">Trianon - Guarapuava</p>
+								<p class="price-post"> R$1.000.000,00</p>
+							</a>
+						</div>
 					</div>
-					<div class="item col-12 col-sm-6 col-lg-4">
-						<a href="single.php">
-							<div class="thumb">
-								<figure aria-hidden="true">
-									<img class="img-cover lazyload" data-src="imgs/test/test-07.jpg" alt="Image 07">
-								</figure>
-								<time class="date absolute" datetime="2021-11-24" aria-label="2021-11-24">24/Nov</time>
-							</div>
-							<h2 class="title-post">Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim, impedit.</h2>
-							<span class="a11y" aria-labelledby="date-7"></span>
-						</a>
-						<time class="date" datetime="2021-11-24" id="date-7">24 de Novembro</time>
+					<div class=" col-12 col-sm-6 col-lg-4">
+						<div class="item">
+							<a href="single.php">
+								<div class="thumb">
+									<figure aria-hidden="true">
+										<img class="img-cover lazyload" data-src="imgs/test/test-02.png" alt="Image 01">
+									</figure>
+								</div>
+								<h2 class="title-post">Apartamento Luxo</h2>
+								<p class="local-post">Santana - Guarapuava</p>
+								<p class="price-post"> R$1.000.000,00</p>
+							</a>
+						</div>
 					</div>
-					<div class="item col-12 col-sm-6 col-lg-4">
-						<a href="single.php">
-							<div class="thumb">
-								<figure aria-hidden="true">
-									<img class="img-cover lazyload" data-src="imgs/test/test-08.jpg" alt="Image 08">
-								</figure>
-								<time class="date absolute" datetime="2021-11-24" aria-label="2021-11-24">24/Nov</time>
-							</div>
-							<h2 class="title-post">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugiat, minus.</h2>
-							<span class="a11y" aria-labelledby="date-8"></span>
-						</a>
-						<time class="date" datetime="2021-11-24" id="date-8">24 de Novembro</time>
+					<div class=" col-12 col-sm-6 col-lg-4">
+						<div class="item">
+							<a href="single.php">
+								<div class="thumb">
+									<figure aria-hidden="true">
+										<img class="img-cover lazyload" data-src="imgs/test/test-01.png" alt="Image 01">
+									</figure>
+								</div>
+								<h2 class="title-post">Casa com piscina
+									no Trianon</h2>
+								<p class="local-post">Trianon - Guarapuava</p>
+								<p class="price-post"> R$1.000.000,00</p>
+							</a>
+						</div>
 					</div>
-					<div class="item col-12 col-sm-6 col-lg-4">
-						<a href="single.php">
-							<div class="thumb">
-								<figure aria-hidden="true">
-									<img class="img-cover lazyload" data-src="imgs/test/test-09.jpg" alt="Image 09">
-								</figure>
-								<time class="date absolute" datetime="2021-11-24" aria-label="2021-11-24">24/Nov</time>
-							</div>
-							<h2 class="title-post">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsa, provident!</h2>
-							<span class="a11y" aria-labelledby="date-9"></span>
-						</a>
-						<time class="date" datetime="2021-11-24" id="date-9">24 de Novembro</time>
+					<div class=" col-12 col-sm-6 col-lg-4">
+						<div class="item">
+							<a href="single.php">
+								<div class="thumb">
+									<figure aria-hidden="true">
+										<img class="img-cover lazyload" data-src="imgs/test/test-02.png" alt="Image 01">
+									</figure>
+								</div>
+								<h2 class="title-post">Apartamento Luxo</h2>
+								<p class="local-post">Santana - Guarapuava</p>
+								<p class="price-post"> R$1.000.000,00</p>
+							</a>
+						</div>
 					</div>
-					<div class="item col-12 col-sm-6 col-lg-4">
-						<a href="single.php">
-							<div class="thumb">
-								<figure aria-hidden="true">
-									<img class="img-cover lazyload" data-src="imgs/test/test-10.jpg" alt="Image 10">
-								</figure>
-								<time class="date absolute" datetime="2021-11-24" aria-label="2021-11-24">24/Nov</time>
-							</div>
-							<h2 class="title-post">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Debitis, optio.</h2>
-							<span class="a11y" aria-labelledby="date-10"></span>
-						</a>
-						<time class="date" datetime="2021-11-24" id="date-10">24 de Novembro</time>
+					<div class=" col-12 col-sm-6 col-lg-4">
+						<div class="item">
+							<a href="single.php">
+								<div class="thumb">
+									<figure aria-hidden="true">
+										<img class="img-cover lazyload" data-src="imgs/test/test-01.png" alt="Image 01">
+									</figure>
+								</div>
+								<h2 class="title-post">Casa com piscina
+									no Trianon</h2>
+								<p class="local-post">Trianon - Guarapuava</p>
+								<p class="price-post"> R$1.000.000,00</p>
+							</a>
+						</div>
 					</div>
-					<div class="item col-12 col-sm-6 col-lg-4">
-						<a href="single.php">
-							<div class="thumb">
-								<figure aria-hidden="true">
-									<img class="img-cover lazyload" data-src="imgs/test/test-11.jpg" alt="Image 11">
-								</figure>
-								<time class="date absolute" datetime="2021-11-24" aria-label="2021-11-24">24/Nov</time>
-							</div>
-							<h2 class="title-post">Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet, sint.</h2>
-							<span class="a11y" aria-labelledby="date-11"></span>
-						</a>
-						<time class="date" datetime="2021-11-24" id="date-11">24 de Novembro</time>
+					<div class=" col-12 col-sm-6 col-lg-4">
+						<div class="item">
+							<a href="single.php">
+								<div class="thumb">
+									<figure aria-hidden="true">
+										<img class="img-cover lazyload" data-src="imgs/test/test-02.png" alt="Image 01">
+									</figure>
+								</div>
+								<h2 class="title-post">Apartamento Luxo</h2>
+								<p class="local-post">Santana - Guarapuava</p>
+								<p class="price-post"> R$1.000.000,00</p>
+							</a>
+						</div>
 					</div>
-					<div class="item col-12 col-sm-6 col-lg-4">
-						<a href="single.php">
-							<div class="thumb">
-								<figure aria-hidden="true">
-									<img class="img-cover lazyload" data-src="imgs/test/test-12.jpg" alt="Image 12">
-								</figure>
-								<time class="date absolute" datetime="2021-11-24" aria-label="2021-11-24">24/Nov</time>
-							</div>
-							<h2 class="title-post">Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus, dolorum!</h2>
-							<span class="a11y" aria-labelledby="date-12"></span>
-						</a>
-						<time class="date" datetime="2021-11-24" id="date-12">24 de Novembro</time>
+					<div class=" col-12 col-sm-6 col-lg-4">
+						<div class="item">
+							<a href="single.php">
+								<div class="thumb">
+									<figure aria-hidden="true">
+										<img class="img-cover lazyload" data-src="imgs/test/test-01.png" alt="Image 01">
+									</figure>
+								</div>
+								<h2 class="title-post">Casa com piscina
+									no Trianon</h2>
+								<p class="local-post">Trianon - Guarapuava</p>
+								<p class="price-post"> R$1.000.000,00</p>
+							</a>
+						</div>
 					</div>
+					<div class=" col-12 col-sm-6 col-lg-4">
+						<div class="item">
+							<a href="single.php">
+								<div class="thumb">
+									<figure aria-hidden="true">
+										<img class="img-cover lazyload" data-src="imgs/test/test-02.png" alt="Image 01">
+									</figure>
+								</div>
+								<h2 class="title-post">Apartamento Luxo</h2>
+								<p class="local-post">Santana - Guarapuava</p>
+								<p class="price-post"> R$1.000.000,00</p>
+							</a>
+						</div>
+					</div>
+					<div class=" col-12 col-sm-6 col-lg-4">
+						<div class="item">
+							<a href="single.php">
+								<div class="thumb">
+									<figure aria-hidden="true">
+										<img class="img-cover lazyload" data-src="imgs/test/test-01.png" alt="Image 01">
+									</figure>
+								</div>
+								<h2 class="title-post">Casa com piscina
+									no Trianon</h2>
+								<p class="local-post">Trianon - Guarapuava</p>
+								<p class="price-post"> R$1.000.000,00</p>
+							</a>
+						</div>
+					</div>
+					<div class=" col-12 col-sm-6 col-lg-4">
+						<div class="item">
+							<a href="single.php">
+								<div class="thumb">
+									<figure aria-hidden="true">
+										<img class="img-cover lazyload" data-src="imgs/test/test-02.png" alt="Image 01">
+									</figure>
+								</div>
+								<h2 class="title-post">Apartamento Luxo</h2>
+								<p class="local-post">Santana - Guarapuava</p>
+								<p class="price-post"> R$1.000.000,00</p>
+							</a>
+						</div>
+					</div>
+					<div class=" col-12 col-sm-6 col-lg-4">
+						<div class="item">
+							<a href="single.php">
+								<div class="thumb">
+									<figure aria-hidden="true">
+										<img class="img-cover lazyload" data-src="imgs/test/test-01.png" alt="Image 01">
+									</figure>
+								</div>
+								<h2 class="title-post">Casa com piscina
+									no Trianon</h2>
+								<p class="local-post">Trianon - Guarapuava</p>
+								<p class="price-post"> R$1.000.000,00</p>
+							</a>
+						</div>
+					</div>
+					<div class=" col-12 col-sm-6 col-lg-4">
+						<div class="item">
+							<a href="single.php">
+								<div class="thumb">
+									<figure aria-hidden="true">
+										<img class="img-cover lazyload" data-src="imgs/test/test-02.png" alt="Image 01">
+									</figure>
+								</div>
+								<h2 class="title-post">Apartamento Luxo</h2>
+								<p class="local-post">Santana - Guarapuava</p>
+								<p class="price-post"> R$1.000.000,00</p>
+							</a>
+						</div>
+					</div>
+					<div class=" col-12 col-sm-6 col-lg-4">
+						<div class="item">
+							<a href="single.php">
+								<div class="thumb">
+									<figure aria-hidden="true">
+										<img class="img-cover lazyload" data-src="imgs/test/test-01.png" alt="Image 01">
+									</figure>
+								</div>
+								<h2 class="title-post">Casa com piscina
+									no Trianon</h2>
+								<p class="local-post">Trianon - Guarapuava</p>
+								<p class="price-post"> R$1.000.000,00</p>
+							</a>
+						</div>
+					</div>
+					<div class=" col-12 col-sm-6 col-lg-4">
+						<div class="item">
+							<a href="single.php">
+								<div class="thumb">
+									<figure aria-hidden="true">
+										<img class="img-cover lazyload" data-src="imgs/test/test-02.png" alt="Image 01">
+									</figure>
+								</div>
+								<h2 class="title-post">Apartamento Luxo</h2>
+								<p class="local-post">Santana - Guarapuava</p>
+								<p class="price-post"> R$1.000.000,00</p>
+							</a>
+						</div>
+					</div>
+					<div class=" col-12 col-sm-6 col-lg-4">
+						<div class="item">
+							<a href="single.php">
+								<div class="thumb">
+									<figure aria-hidden="true">
+										<img class="img-cover lazyload" data-src="imgs/test/test-01.png" alt="Image 01">
+									</figure>
+								</div>
+								<h2 class="title-post">Casa com piscina
+									no Trianon</h2>
+								<p class="local-post">Trianon - Guarapuava</p>
+								<p class="price-post"> R$1.000.000,00</p>
+							</a>
+						</div>
+					</div>
+					<div class=" col-12 col-sm-6 col-lg-4">
+						<div class="item">
+							<a href="single.php">
+								<div class="thumb">
+									<figure aria-hidden="true">
+										<img class="img-cover lazyload" data-src="imgs/test/test-02.png" alt="Image 01">
+									</figure>
+								</div>
+								<h2 class="title-post">Apartamento Luxo</h2>
+								<p class="local-post">Santana - Guarapuava</p>
+								<p class="price-post"> R$1.000.000,00</p>
+							</a>
+						</div>
+					</div>
+					<div class=" col-12 col-sm-6 col-lg-4">
+						<div class="item">
+							<a href="single.php">
+								<div class="thumb">
+									<figure aria-hidden="true">
+										<img class="img-cover lazyload" data-src="imgs/test/test-01.png" alt="Image 01">
+									</figure>
+								</div>
+								<h2 class="title-post">Casa com piscina
+									no Trianon</h2>
+								<p class="local-post">Trianon - Guarapuava</p>
+								<p class="price-post"> R$1.000.000,00</p>
+							</a>
+						</div>
+					</div>
+					<div class=" col-12 col-sm-6 col-lg-4">
+						<div class="item">
+							<a href="single.php">
+								<div class="thumb">
+									<figure aria-hidden="true">
+										<img class="img-cover lazyload" data-src="imgs/test/test-02.png" alt="Image 01">
+									</figure>
+								</div>
+								<h2 class="title-post">Apartamento Luxo</h2>
+								<p class="local-post">Santana - Guarapuava</p>
+								<p class="price-post"> R$1.000.000,00</p>
+							</a>
+						</div>
+					</div>
+
+					<div class="pagination">
+
+						<button class="see-more" aria-label="Carregar mais postagens">
+							<span>Ver Mais</span>
+							<i class="fas fa-spinner"></i>
+						</button>
+						<img src="./imgs//see-more-bee.png" alt="see-more-bee" class="lazyload see-more-bee">
+					</div>
+
 				</div>
-				
-				<!-- EXEMPLO 1 -->
-
-				<div class="pagination">
-					<button class="see-more" aria-label="Carregar mais postagens">
-						<span>Ver Mais</span>
-						<i class="fas fa-spinner"></i>
-					</button>
-				</div>
-
-				<script>
-					// DELETE AFTER AJAX CREATE
-
-					let pagBtn = document.querySelector('.pagination .see-more');
-					pagBtn.onclick = function() {
-					    pagBtn.classList.add('active');
-					};
-				</script>
-
-				<!-- EXEMPLO 2 -->
-
-				<nav class="pagination-numeric" aria-label="Paginação">
-					<a class="prev page-numbers" href="#" aria-label="Anterior"><i class="fas fa-angle-left"></i></a>
-					<a class="page-numbers" href="#">1</a>
-					<span class="page-numbers dots">…</span>
-					<a class="page-numbers" href="#">3</a>
-					<a class="page-numbers" href="#">4</a>
-					<span class="page-numbers current">5</span>
-					<a class="page-numbers" href="#">6</a>
-					<a class="page-numbers" href="#">7</a>
-					<span class="page-numbers dots">…</span>
-					<a class="page-numbers" href="#">49</a>
-					<a class="next page-numbers" href="#" aria-label="Próximo"><i class="fas fa-angle-right"></i></a>      
-				</nav>	
 			</div>
-		</section>
-	</main>
-   
+
+			<!-- EXEMPLO 1 -->
+
+			<!-- 300000 == 100%
+			        150000   == x% -->
+
+			<script>
+				// DELETE AFTER AJAX CREATE
+
+				let pagBtn = document.querySelector('.pagination .see-more');
+				pagBtn.onclick = function () {
+					pagBtn.classList.add('active');
+				};
+			</script>
+			<!-- START THE CUSTOM SLIDER -->
+			<script>
+				slider = document.getElementById("min-ranger");
+				document.getElementById("min-ranger-value").innerHTML = slider.value;
+				maxSlider = document.getElementById("max-ranger");
+				document.getElementById("max-ranger-value").innerHTML = maxSlider.value;
+
+	
+
+				var x =   (slider.value*100)/300000;
+				var x2 =   (maxSlider.value*100)/300000;
+
+
+
+				maxSlider.style.setProperty("background", `linear-gradient(to right,transparent 0%,transparent ${x}%,  #ed8f01 ${x}%, #ed8f01 ${x2}%, transparent ${x2}% , transparent 100%)`, "important");
+			</script>
+
+			<script>
+				var slider = document.getElementById("min-ranger");
+				slider.addEventListener('click', function () {
+					document.getElementById("min-ranger-value").innerHTML = slider.value;
+					
+
+					
+				});
+
+				var maxSlider = document.getElementById("max-ranger");
+				maxSlider.addEventListener('click', function () {
+					document.getElementById("max-ranger-value").innerHTML = maxSlider.value;	
+					var x2 =   (maxSlider.value*100)/300000;
+					maxSlider.style.setProperty("background", `linear-gradient(to right,transparent 0%,transparent 10%,  #ed8f01 10%, #ed8f01 ${x2}%, transparent ${x2}% , transparent 100%)`, "important");
+
+				});
+				
+				// var x =   (slider.value*100)/300000;
+				// var x2 =   (maxSlider.value*100)/300000;
+
+
+
+				// maxSlider.style.setProperty("background", `linear-gradient(to right,transparent 0%,transparent ${x}%,  #ed8f01 ${x}%, #ed8f01 ${x2}%, transparent ${x2}% , transparent 100%)`, "important");
+
+				
+				// document.getElementById("min-ranger-value").innerHTML = slider.nodeValue;
+
+			</script>
+
+
+
+		</div>
+	</section>
+</main>
+
+<script defer
+	src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAs5CY-4vu-pytYixd2wGvBdQJf1rC9bns&callback=initMap"></script>
 <?php include('footer.php'); ?>
