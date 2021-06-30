@@ -1360,7 +1360,7 @@ header.nav-small .navbar .nav > li::after {
   pointer-events: initial;
 }
 
-@media (max-width: 1199.98px) {
+@media (max-width: 1279.98px) {
   header .navbar {
     padding: 15px 0;
   }
@@ -1384,7 +1384,7 @@ header.nav-small .navbar .nav > li::after {
   }
 }
 
-@media (min-width: 1200px) and (max-width: 1399.98px) {
+@media (min-width: 1280px) and (max-width: 1399.98px) {
   header .navbar #menu-toggle:hover {
     color: #282828;
   }
@@ -1619,7 +1619,7 @@ footer #k13 a:hover {
   height: 500px;
 }
 
-@media (max-width: 1199.98px) {
+@media (max-width: 1279.98px) {
   .banner .swiper-banner .swiper-slide {
     height: 400px;
   }
@@ -2126,7 +2126,7 @@ footer #k13 a:hover {
   }
 }
 
-@media (min-width: 992px) and (max-width: 1199.98px) {
+@media (min-width: 992px) and (max-width: 1279.98px) {
   .instagram #instafeed .item {
     height: 175px;
   }
@@ -2595,7 +2595,7 @@ footer #k13 a:hover {
   }
 }
 
-@media (min-width: 768px) and (max-width: 1199.98px) {
+@media (min-width: 768px) and (max-width: 1279.98px) {
   .newsletter p {
     width: 45%;
   }
@@ -3280,11 +3280,16 @@ footer #k13 a:hover {
 
 .list-posts .categories {
   margin: 15px 0 25px;
-  padding-left: 20.313vw;
-  padding-right: 30px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+
+@media (min-width: 992px) {
+  .list-posts .categories {
+    padding-left: 20.313vw;
+    padding-right: 30px;
+  }
 }
 
 .list-posts .categories .form-layout .form-group {
@@ -3838,7 +3843,7 @@ footer #k13 a:hover {
   color: #333333;
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1280px) {
   .container {
     max-width: 1140px;
   }
@@ -4016,6 +4021,13 @@ button.disabled {
 }
 
 @media (max-width: 767.98px) {
+  #blog .list-posts .container {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+@media (max-width: 767.98px) {
   #blog .list-posts .container .row {
     margin-left: 0;
     margin-right: 0;
@@ -4025,6 +4037,35 @@ button.disabled {
 #blog .list-posts .container .categories {
   margin: 0;
   background-color: #282828;
+}
+
+@media (min-width: 576px) and (max-width: 1399.98px) {
+  #blog .list-posts .container .categories {
+    padding-left: 0;
+  }
+  #blog .list-posts .container .categories .text {
+    color: #ed8f01;
+  }
+  #blog .list-posts .container .categories .text svg {
+    color: #ed8f01;
+  }
+}
+
+#blog .list-posts .container .categories .label {
+  margin: 0;
+  margin-top: 34px;
+  margin-bottom: 19px;
+  padding: 0;
+}
+
+@media (min-width: 576px) and (max-width: 1399.98px) {
+  #blog .list-posts .container .categories .label {
+    font-size: initial;
+  }
+}
+
+#blog .list-posts .container .categories .category-check {
+  margin-bottom: 1px;
 }
 
 #blog .list-posts .container .items {
@@ -4167,6 +4208,53 @@ button.disabled {
   bottom: 0;
 }
 
+#blog .list-posts .form-layout {
+  color: white;
+}
+
+#blog .list-posts .form-layout .form-group {
+  margin: 12px 0;
+}
+
+#blog .list-posts .form-layout .form-group .radio-custom-box .item {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  display: block;
+  margin: 0;
+  background-color: transparent;
+}
+
+#blog .list-posts .form-layout .form-group .radio-custom-box .item::after {
+  display: none;
+}
+
+#blog .list-posts .form-layout .form-group .radio-custom-box .item .check-radio {
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+
+#blog .list-posts .form-layout .form-group .radio-custom-box .item .check-radio:not(:checked) + label:before, #blog .list-posts .form-layout .form-group .radio-custom-box .item .check-radio:not(:checked) + label:after, #blog .list-posts .form-layout .form-group .radio-custom-box .item .check-radio:checked + label:before, #blog .list-posts .form-layout .form-group .radio-custom-box .item .check-radio:checked + label:after {
+  width: 18px;
+  height: 18px;
+}
+
+#blog .list-posts .form-layout .form-group .radio-custom-box .item .check-radio:not(:checked) + label:before, #blog .list-posts .form-layout .form-group .radio-custom-box .item .check-radio:checked + label:before {
+  left: 6px;
+  top: 1px;
+  border-color: #3f3f3f;
+  background: #585858;
+}
+
+#blog .list-posts .form-layout .form-group .radio-custom-box .item .check-radio:not(:checked) + label:after, #blog .list-posts .form-layout .form-group .radio-custom-box .item .check-radio:checked + label:after {
+  left: 4px;
+  top: 0px;
+}
+
+#blog .list-posts .form-layout .form-group .radio-custom-box .item .check-radio:checked + label:before {
+  background: #ed8f01;
+  border-color: #ba7001;
+}
+
 @media (max-width: 767.98px) {
   #blog .map {
     width: 100%;
@@ -4227,5 +4315,67 @@ button.disabled {
   position: relative;
   border: 0;
   z-index: 10;
+}
+
+@media (max-width: 767.98px) {
+  .search-order {
+    padding-right: 0;
+    padding-left: 0;
+  }
+  .search-order div:first-child {
+    padding: 0;
+  }
+}
+
+.search-order .search-bar-2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 56px;
+  background-color: #efefef;
+  border-radius: 28px;
+  width: 100%;
+  padding-left: 32px;
+  padding-right: 20px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media (max-width: 767.98px) {
+  .search-order .search-bar-2 {
+    padding-left: 24px;
+    padding-right: 19px;
+  }
+}
+
+.search-order .search-bar-2 input[type="search"], .search-order .search-bar-2 .form-layout .form-group textarea[type="search"], .form-layout .form-group .search-order .search-bar-2 textarea[type="search"], .search-order .search-bar-2 .form-layout .form-group .select-custom-box .text[type="search"], .form-layout .form-group .select-custom-box .search-order .search-bar-2 .text[type="search"] {
+  border: 0;
+  background-color: transparent;
+  height: 100%;
+  width: 100%;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+}
+
+.search-order .search-bar-2 input[type="search"]:focus, .search-order .search-bar-2 .form-layout .form-group textarea[type="search"]:focus, .form-layout .form-group .search-order .search-bar-2 textarea[type="search"]:focus, .search-order .search-bar-2 .form-layout .form-group .select-custom-box .text[type="search"]:focus, .form-layout .form-group .select-custom-box .search-order .search-bar-2 .text[type="search"]:focus {
+  outline: none;
+}
+
+.search-order .order-by label {
+  border: 2px solid black;
+}
+
+@media (max-width: 767.98px) {
+  .search-order .order-by label {
+    border-color: #ed8f01;
+  }
+  .search-order .order-by label .text {
+    color: #ed8f01;
+  }
+  .search-order .order-by label .text svg {
+    color: #ed8f01;
+  }
 }
 /*# sourceMappingURL=style.css.map */
