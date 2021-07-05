@@ -33,7 +33,8 @@
 					<ul class="simuladores">
 						<li><a href="#"><img src="./imgs/caixa.png" style="width: 80px;" alt="caixa-logo"></a></li>
 						<li><a href="#"><img src="./imgs/itau.png" style="width: 34px;" alt="itau-logo"></a></a></li>
-						<li><a href="#"><img src="./imgs/banco-do-brasil.png" style="width: 80px;" alt="banco-do-brasil-logo"></a></li>
+						<li><a href="#"><img src="./imgs/banco-do-brasil.png" style="width: 80px;"
+									alt="banco-do-brasil-logo"></a></li>
 					</ul>
 					<ul>
 						<li><a href="page.php">Quem Somos</a></li>
@@ -118,7 +119,10 @@
 <script src="libs/lazysizes-5.3.2.min.js"></script>
 <script src='https://www.google.com/recaptcha/api.js'></script>
 <script src="libs/simple-mask-money.js"></script>
+<script src="libs/jquery-ui-1.12.1.custom/jquery-ui.js"></script>
 <script src="js/base.js"></script>
+
+
 
 </body>
 

@@ -610,3 +610,36 @@ jQuery(window).on('load resize', function () {
     }
 });
 
+
+
+$(function () {
+    $("#slider-range").slider({
+        range: true,
+        min: 0,
+        max: 300000,
+        values: [1000, 150000],
+        step: 50,
+        slide: function (event, ui) {
+            $("#val-1").val(ui.values[0]);
+            $("#val-2").val(ui.values[1]);
+            $("#label-val-1").html("R$" + ui.values[0]);
+            $("#label-0val-2").html("R$" + ui.values[1]);
+
+        }
+    });
+
+    $("#label-val-1").html("R$" + $("#slider-range").slider("values", 0));
+    $("#label-val-2").html("R$" + $("#slider-range").slider("values", 1));
+
+    $("#val-1").val($("#slider-range").slider("values", 0));
+    $("#val-2").val($("#slider-range").slider("values", 1));
+}
+);
+
+// $( "#val-1" ).change(function() {
+//     $( "#slider-range" ).slider( "values", 0, $( "#val-1" ).val() );
+//     alert($( "#slider-range" ).slider( "values",0));
+//   });
+
+
+

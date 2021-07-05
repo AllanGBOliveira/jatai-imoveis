@@ -92,56 +92,45 @@
 						</div>
 					</form>
 
-					<form action="" class="form-layout">
+					<form action="" class="form-layout position-relative">
+
+
 						<h2 id="category-header" class="label" style="margin-bottom: 0;">Filtrar preço</h2>
-						<div class="double-slider">
-
-							<input type="range" class="slider" min="0" max="300000" step="50" value="1000"
-								id="min-ranger">
-
-							<input type="range" class="slider max" min="0" max="300000" step="50" value="150000"
-								id="max-ranger">
-							<!-- <label for="customRange2" class="form-label">Example range</label>
-							<input type="range" class="form-range" min="0" max="5" id="customRange2"> -->
-
-							<p style="color: white; font-size: 14px;" id="min-ranger-value" class="float-start"> </p>
-							<p style="color: white; font-size: 14px" id="max-ranger-value" class="float-end"> </p>
-
-						</div>
-						<div style="margin-top: 25px;" class="form-group">
-							<span>Mínimo</span>
-							<input inputmode="numeric" id="min-ranger-input" class="price-range"
-								autocomplete="max-ranger-input" name="min-ranger-input"><br>
-						</div>
-						<div class="form-group">
-							<span>Máximo</span>
-							<input inputmode="numeric" id="max-ranger-input" class="price-range"
-								autocomplete="max-ranger-input" name="max-ranger-input"><br>
+						<div>
+							<div id="slider-range"></div>
+							<label id="label-val-1" for="val-1" class="float-start"></label>
+							<label id="label-val-2" for="val-2" class="float-end"></label>
+							<div class="form-group">
+								<span class="sub-label">Mínimo</span>
+								<input id="val-1" type="number" step="50" class="k13">
+							</div>
+							<div class="form-group">
+								<span class="sub-label">Máximo</span>
+								<input id="val-2" type="number" step="50">
+							</div>
 						</div>
 					</form>
 					<form action="" class="form-layout">
 						<h2 id="category-header" class="label">diferenciais</h2>
-						<div class="form-group">
+						<div class="form-group" style="margin: 0;">
 							<div class="radio-custom-box">
 								<div class="item">
 									<input type="checkbox" name="garagem" id="garagem" class="check-radio" />
 									<label for="garagem">Garagem</label>
 								</div>
 								<div class="item">
-									<input type="checkbox" name="quartos" id="quartos" class="check-radio" />
+									<input type="checkbox" name="quartos" id="quartos" class="check-radio" checked />
 									<label for="quartos">Quartos</label>
 								</div>
 								<div class="item">
-									<input type="checkbox" name="comodos" id="comodos" class="check-radio" />
+									<input type="checkbox" name="comodos" id="comodos" class="check-radio" checked />
 									<label for="comodos">Cômodos</label>
 								</div>
 							</div>
 					</form>
-
 				</nav>
-
-
-				<div class="row col-12 col-sm col-xxl-6 items justify-content-center  justify-content-md-start">
+				<div id="main-row"
+					class="row col-12 col-sm col-xxl-6 items justify-content-center  justify-content-md-start">
 					<section class="map skip-link-box col-12 d-none d-sm-block">
 						<button class="skip-link" onKeyPress="skipLink(waze)">Pular mapa</button>
 
@@ -172,7 +161,6 @@
 										<option value="Sobrado">Sobrado</option>
 										<option value="menor">Preço (Menor)</option>
 										<option value="maior">Preço (Maior)</option>
-										
 									</select>
 									<div class="text">
 										<span>Ordenar</span>
@@ -183,7 +171,7 @@
 					</div>
 
 					<div class="col-10 col-sm-6 col-lg-4">
-						<div class="item">
+						<div id="casa" class="item">
 							<a href="single.php">
 								<div class="thumb">
 									<figure aria-hidden="true">
@@ -198,7 +186,7 @@
 						</div>
 					</div>
 					<div class="col-10 col-sm-6 col-lg-4">
-						<div class="item">
+						<div class="item apartamento">
 							<a href="single.php">
 								<div class="thumb">
 									<figure aria-hidden="true">
@@ -212,7 +200,7 @@
 						</div>
 					</div>
 					<div class="col-10 col-sm-6 col-lg-4">
-						<div class="item">
+						<div id="casa" class="item">
 							<a href="single.php">
 								<div class="thumb">
 									<figure aria-hidden="true">
@@ -227,7 +215,7 @@
 						</div>
 					</div>
 					<div class="col-10 col-sm-6 col-lg-4">
-						<div class="item">
+						<div class="item apartamento">
 							<a href="single.php">
 								<div class="thumb">
 									<figure aria-hidden="true">
@@ -241,7 +229,7 @@
 						</div>
 					</div>
 					<div class="col-10 col-sm-6 col-lg-4">
-						<div class="item">
+						<div id="casa" class="item">
 							<a href="single.php">
 								<div class="thumb">
 									<figure aria-hidden="true">
@@ -256,7 +244,7 @@
 						</div>
 					</div>
 					<div class="col-10 col-sm-6 col-lg-4">
-						<div class="item">
+						<div class="item apartamento">
 							<a href="single.php">
 								<div class="thumb">
 									<figure aria-hidden="true">
@@ -270,7 +258,7 @@
 						</div>
 					</div>
 					<div class="col-10 col-sm-6 col-lg-4">
-						<div class="item">
+						<div id="casa" class="item">
 							<a href="single.php">
 								<div class="thumb">
 									<figure aria-hidden="true">
@@ -285,7 +273,7 @@
 						</div>
 					</div>
 					<div class="col-10 col-sm-6 col-lg-4">
-						<div class="item">
+						<div class="item apartamento">
 							<a href="single.php">
 								<div class="thumb">
 									<figure aria-hidden="true">
@@ -299,7 +287,7 @@
 						</div>
 					</div>
 					<div class="col-10 col-sm-6 col-lg-4">
-						<div class="item">
+						<div id="casa" class="item">
 							<a href="single.php">
 								<div class="thumb">
 									<figure aria-hidden="true">
@@ -314,7 +302,7 @@
 						</div>
 					</div>
 					<div class="col-10 col-sm-6 col-lg-4">
-						<div class="item">
+						<div class="item apartamento">
 							<a href="single.php">
 								<div class="thumb">
 									<figure aria-hidden="true">
@@ -328,7 +316,7 @@
 						</div>
 					</div>
 					<div class="col-10 col-sm-6 col-lg-4">
-						<div class="item">
+						<div id="casa" class="item">
 							<a href="single.php">
 								<div class="thumb">
 									<figure aria-hidden="true">
@@ -343,7 +331,7 @@
 						</div>
 					</div>
 					<div class="col-10 col-sm-6 col-lg-4">
-						<div class="item">
+						<div class="item apartamento">
 							<a href="single.php">
 								<div class="thumb">
 									<figure aria-hidden="true">
@@ -357,7 +345,7 @@
 						</div>
 					</div>
 					<div class="col-10 col-sm-6 col-lg-4">
-						<div class="item">
+						<div id="casa" class="item">
 							<a href="single.php">
 								<div class="thumb">
 									<figure aria-hidden="true">
@@ -372,7 +360,7 @@
 						</div>
 					</div>
 					<div class="col-10 col-sm-6 col-lg-4">
-						<div class="item">
+						<div class="item apartamento">
 							<a href="single.php">
 								<div class="thumb">
 									<figure aria-hidden="true">
@@ -386,7 +374,7 @@
 						</div>
 					</div>
 					<div class="col-10 col-sm-6 col-lg-4">
-						<div class="item">
+						<div id="casa" class="item">
 							<a href="single.php">
 								<div class="thumb">
 									<figure aria-hidden="true">
@@ -401,7 +389,7 @@
 						</div>
 					</div>
 					<div class="col-10 col-sm-6 col-lg-4">
-						<div class="item">
+						<div class="item apartamento">
 							<a href="single.php">
 								<div class="thumb">
 									<figure aria-hidden="true">
@@ -415,7 +403,7 @@
 						</div>
 					</div>
 					<div class="col-10 col-sm-6 col-lg-4">
-						<div class="item">
+						<div id="casa" class="item">
 							<a href="single.php">
 								<div class="thumb">
 									<figure aria-hidden="true">
@@ -430,7 +418,7 @@
 						</div>
 					</div>
 					<div class="col-10 col-sm-6 col-lg-4">
-						<div class="item">
+						<div class="item apartamento">
 							<a href="single.php">
 								<div class="thumb">
 									<figure aria-hidden="true">
@@ -444,7 +432,7 @@
 						</div>
 					</div>
 					<div class="col-10 col-sm-6 col-lg-4">
-						<div class="item">
+						<div id="casa" class="item">
 							<a href="single.php">
 								<div class="thumb">
 									<figure aria-hidden="true">
@@ -459,7 +447,7 @@
 						</div>
 					</div>
 					<div class="col-10 col-sm-6 col-lg-4">
-						<div class="item">
+						<div class="item apartamento">
 							<a href="single.php">
 								<div class="thumb">
 									<figure aria-hidden="true">
@@ -473,7 +461,7 @@
 						</div>
 					</div>
 					<div class="col-10 col-sm-6 col-lg-4">
-						<div class="item">
+						<div id="casa" class="item">
 							<a href="single.php">
 								<div class="thumb">
 									<figure aria-hidden="true">
@@ -488,7 +476,7 @@
 						</div>
 					</div>
 					<div class="col-10 col-sm-6 col-lg-4">
-						<div class="item">
+						<div class="item apartamento">
 							<a href="single.php">
 								<div class="thumb">
 									<figure aria-hidden="true">
@@ -502,7 +490,7 @@
 						</div>
 					</div>
 					<div class="col-10 col-sm-6 col-lg-4">
-						<div class="item">
+						<div id="casa" class="item">
 							<a href="single.php">
 								<div class="thumb">
 									<figure aria-hidden="true">
@@ -517,7 +505,7 @@
 						</div>
 					</div>
 					<div class="col-10 col-sm-6 col-lg-4">
-						<div class="item">
+						<div class="item apartamento">
 							<a href="single.php">
 								<div class="thumb">
 									<figure aria-hidden="true">
@@ -543,11 +531,6 @@
 				</div>
 			</div>
 
-			<!-- EXEMPLO 1 -->
-
-			<!-- 300000 == 100%
-			        150000   == x% -->
-
 			<script>
 				// DELETE AFTER AJAX CREATE
 
@@ -556,60 +539,6 @@
 					pagBtn.classList.add('active');
 				};
 			</script>
-			<!-- START THE CUSTOM SLIDER -->
-			<script>
-				slider = document.getElementById("min-ranger");
-				document.getElementById("min-ranger-value").innerHTML = slider.value;
-				document.getElementById("min-ranger-input").value = slider.value;
-				maxSlider = document.getElementById("max-ranger");
-				document.getElementById("max-ranger-value").innerHTML = maxSlider.value;
-				document.getElementById("max-ranger-input").value = maxSlider.value;
-
-
-
-
-				var x = (slider.value * 100) / 300000;
-				var x2 = (maxSlider.value * 100) / 300000;
-
-
-
-				maxSlider.style.setProperty("background", `linear-gradient(to right,transparent 0%,transparent ${x}%,  #ed8f01 ${x}%, #ed8f01 ${x2}%, transparent ${x2}% , transparent 100%)`, "important");
-			</script>
-
-			<script>
-				var slider = document.getElementById("min-ranger");
-				slider.addEventListener('change', function () {
-					document.getElementById("min-ranger-value").innerHTML = slider.value;
-					document.getElementById("min-ranger-input").value = slider.value;
-					x = (slider.value * 100) / 300000;
-					maxSlider.style.setProperty("background", `linear-gradient(to right,transparent 0%,transparent  ${x}%,  #ed8f01  ${x}%, #ed8f01 ${x2}%, transparent ${x2}% , transparent 100%)`, "important");
-
-				});
-
-				var maxSlider = document.getElementById("max-ranger");
-				maxSlider.addEventListener('change', function () {
-					document.getElementById("max-ranger-value").innerHTML = maxSlider.value;
-					document.getElementById("max-ranger-input").value = maxSlider.value;
-					x2 = (maxSlider.value * 100) / 300000;
-					maxSlider.style.setProperty("background", `linear-gradient(to right,transparent 0%,transparent  ${x}%,  #ed8f01  ${x}%, #ed8f01 ${x2}%, transparent ${x2}% , transparent 100%)`, "important");
-				});
-
-
-				var minInput = document.getElementById("min-ranger-input");
-				minInput.addEventListener("change", function () {
-					document.getElementById("min-ranger").value = minInput.value;
-					x = (minInput.value * 100) / 300000;
-					maxSlider.style.setProperty("background", `linear-gradient(to right,transparent 0%,transparent  ${x}%,  #ed8f01  ${x}%, #ed8f01 ${x2}%, transparent ${x2}% , transparent 100%)`, "important");
-				});
-
-				var maxInput = document.getElementById("max-ranger-input");
-				maxInput.addEventListener("change", function () {
-					document.getElementById("max-ranger").value = maxInput.value;
-					x2 = (maxInput.value * 100) / 300000;
-					maxSlider.style.setProperty("background", `linear-gradient(to right,transparent 0%,transparent  ${x}%,  #ed8f01  ${x}%, #ed8f01 ${x2}%, transparent ${x2}% , transparent 100%)`, "important");
-				});
-			</script>
-
 			<script>
 				function changePlaceholder(media) {
 					if (media.matches) {
@@ -623,9 +552,6 @@
 				changePlaceholder(media);
 				media.addListener(changePlaceholder);
 			</script>
-
-
-
 		</div>
 	</section>
 </main>

@@ -26,6 +26,9 @@
     <meta name="theme-color" content="#ffffff">
     <link rel="stylesheet" href="libs/bootstrap-5.0.1-dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="libs/fancybox-3.5.7/dist/jquery.fancybox.min.css" />
+    <link rel="stylesheet" href="libs/jquery-ui-1.12.1.custom/jquery-ui.min.css">
+    <link rel="stylesheet" href="libs/jquery-ui-1.12.1.custom/jquery-ui.structure.min.css">
+    <link rel="stylesheet" href="libs/jquery-ui-1.12.1.custom/jquery-ui.theme.min.css">
     <link rel="stylesheet" href="libs/swiper-6.6.2/swiper-bundle.min.css">
     <link rel="preload prefetch" href="fonts/Poppins-Regular.woff" as="font" type="font/woff" crossorigin="anonymous" />
     <link rel="preload prefetch" href="fonts/Poppins-Regular.woff2" as="font" type="font/woff2"
