@@ -10,7 +10,7 @@
 			<article>
 				<div class="row">
 					<div class="col-12 sec">
-						<img src="./imgs/people.png" alt="">
+						<img data-src="./imgs/people.png" alt="">
 						<h5>Especialistas em selecionar
 							apenas os melhores imóveis</h5>
 						<p> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt
@@ -57,8 +57,8 @@
 	<div class="row">
 		<div class="col-12 sec s-1 row">
 			<div class="col-12 col-lg-6 thumbnail ">
-				<img src="./imgs/people.png" alt="people" class="d-none d-sm-block lazyload">
-				<img src="./imgs/people-m.png" alt="people" class="d-block d-sm-none lazyload">
+				<img data-src="./imgs/people.png" alt="people" class="d-none d-sm-block lazyload">
+				<img data-src="./imgs/people-m.png" alt="people" class="d-block d-sm-none lazyload">
 
 			</div>
 			<div class="col-12 col-lg-6 description">
@@ -80,7 +80,7 @@
 		</div>
 		<div class="col-12 sec s-2 row">
 			<div class="col-12 col-sm-6 thumbnail justify-content-end d-none d-sm-flex">
-				<img src="./imgs/bee2.png" alt="bee2" class=" lazyload">
+				<img  data-src="./imgs/bee2.png" alt="bee2" class="lazy-img lazyload">
 			</div>
 			<div class="col-12 col-sm-6 description d-flex align-middle">
 				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
@@ -113,54 +113,54 @@
 				</div>
 			</div>
 			<div class="thumbnail col-12 col-lg-6 p-0">
-				<!-- <img class="" src="./imgs/orange_bee.png" alt="orange_bee"> -->
-				<img src="./imgs/orange-rec.png" alt="orange-rec" class="bg d-none d-lg-block lazyload">
-				<img src="./imgs/orange-rec-m.png" alt="orange-rec-," class="bg-m d-block d-lg-none lazyload">
-				<img src="./imgs/bee_oct.png" alt="bee_oct" class="bee lazyload">
+				<!-- <img class="" data-src="./imgs/orange_bee.png" alt="orange_bee"> -->
+				<img data-src="./imgs/orange-rec.png" alt="orange-rec" class="bg d-none d-lg-block lazyload">
+				<img data-src="./imgs/orange-rec-m.png" alt="orange-rec-," class="bg-m d-block d-lg-none lazyload">
+				<img data-src="./imgs/bee_oct.png" alt="bee_oct" class="bee lazyload">
 
 			</div>
 		</div>
 		<div class="col-12  sec s-4 d-flex justify-content-center">
-			<div class="row col-12 col-lg-6">
+			<div class="row col-12 col-lg-6 cont">
 				<p class="header col-12 ">Conheça os imóveis da Jataí</p>
 				<div class="col-12 col-sm-6">
 					<div class="item">
-						<a href="#item-"><img src="./imgs/items/item-0.png" alt="item-0" class="lazyload">
+						<a href="#item-"><img data-src="./imgs/items/item-0.png" alt="item-0" class="lazyload">
 							<p>Cidade</p>
 						</a>
 					</div>
 				</div>
 				<div class="col-12 col-sm-6">
 					<div class="item">
-						<a href="#item-"><img src="./imgs/items/item-1.png" alt="item-1" class="lazyload">
+						<a href="#item-"><img data-src="./imgs/items/item-1.png" alt="item-1" class="lazyload">
 							<p>Industrial</p>
 						</a>
 					</div>
 				</div>
 				<div class="col-12 col-sm-6">
 					<div class="item">
-						<a href="#item-"><img src="./imgs/items/item-2.png" alt="item-2" class="lazyload">
+						<a href="#item-"><img data-src="./imgs/items/item-2.png" alt="item-2" class="lazyload">
 							<p>Praia</p>
 						</a>
 					</div>
 				</div>
 				<div class="col-12 col-sm-6">
 					<div class="item">
-						<a href="#item-"><img src="./imgs/items/item-3.png" alt="item-3" class="lazyload">
+						<a href="#item-"><img data-src="./imgs/items/item-3.png" alt="item-3" class="lazyload">
 							<p>Campo</p>
 						</a>
 					</div>
 				</div>
 				<div class="col-12 col-sm-6">
 					<div class="item">
-						<a href="#item-"><img src="./imgs/items/item-4.png" alt="item-4" class="lazyload">
+						<a href="#item-"><img data-src="./imgs/items/item-4.png" alt="item-4" class="lazyload">
 							<p>Comércio</p>
 						</a>
 					</div>
 				</div>
 				<div class="col-12 col-sm-6">
 					<div class="item">
-						<a href="#item-"><img src="./imgs/items/item-5.png" alt="item-5" class="lazyload">
+						<a href="#item-"><img data-src="./imgs/items/item-5.png" alt="item-5" class="lazyload">
 							<p>+ VER TODOS</p>
 						</a>
 					</div>

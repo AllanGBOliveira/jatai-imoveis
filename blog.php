@@ -3,7 +3,6 @@
 	<div class="breadcrumb">
 		<span style="text-transform: none;">Imóveis Urbanos</span>
 		<p class="sub-title">6.455 imóveis disponíveis</p>
-
 	</div>
 </section>
 <main id="blog" tabindex="-1" aria-labelledby="a11y-title">

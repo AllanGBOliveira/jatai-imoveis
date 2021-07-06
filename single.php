@@ -1,7 +1,12 @@
 <?php include('header.php'); ?>
-
-	<main id="single" tabindex="-1" aria-label="Blog interna">
-		<section class="post">
+<section>
+	<div class="breadcrumb">
+		<span style="text-transform: none;">CASA MOBILIADA - BAIRRO SANTANA</span>
+		<p class="sub-title">Santana - Guarapuava | 200m² | 5 cômodos</p>
+	</div>
+</section>
+<main id="single" tabindex="-1" aria-label="Blog interna">
+	<!-- <section class="post">
 			<div class="list-posts">
 				<div class="container">
 					<div class="row">
@@ -9,8 +14,9 @@
 							<div class="item highlight">
 								<div class="thumb">
 									<figure>
-										<img class="img-cover lazyload" data-src="imgs/default.png" alt="Image Content">
+										<img class="img-cover lazyload" data-src="imgs/items/test-01.png" alt="Image Content">
 									</figure>
+						
 								</div>
 								<div class="categories">
 									<ul class="list-inline">
@@ -110,11 +116,30 @@
 					</div>
 				</div>
 			</div>
+		</section> -->
+	<div class="single-item">
+		<section class="swiper-gallery-test swiper-gallery swiper-container">
+			<div class="swiper-button-prev"><img data-src="./imgs/items/Black & White 1.png" alt="Black & White 1"
+					class="lazyload"></div>
+			<div class="swiper-wrapper">
+				<button class="swiper-slide" data-src="imgs/items/test-01.png"
+					aria-label="Abrir galeria no item 1 de 2">
+					<img data-src="imgs/items/test-01.png" class="img-cover swiper-lazy" alt="Imagem 01">
+					<div class="swiper-lazy-preloader"></div>
+				</button>
+				<button class="swiper-slide" data-src="imgs/test/test-04.jpg" aria-label="Abrir galeria no item 2 de 2">
+					<img data-src="imgs/test/test-04.jpg" class="img-cover swiper-lazy" alt="Imagem 02">
+					<div class="swiper-lazy-preloader"></div>
+				</button>
+			</div>
+			<div class="swiper-button-next"><img data-src="./imgs/items/Black & White 2.png" alt="Black & White 2"
+					class="lazyload"></div>
 		</section>
-	</main>
+	</div>
+</main>
 
-	<div id="fb-root"></div>
-	<script async defer crossorigin="anonymous" src="https://connect.facebook.net/pt_BR/sdk.js#xfbml=1&version=v9.0" nonce="xPvDJOIA"></script>
-	<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5da4cf97275d81bc"></script>
-   
+
+
+
+
 <?php include('footer.php'); ?>

@@ -635,11 +635,3 @@ $(function () {
     $("#val-2").val($("#slider-range").slider("values", 1));
 }
 );
-
-// $( "#val-1" ).change(function() {
-//     $( "#slider-range" ).slider( "values", 0, $( "#val-1" ).val() );
-//     alert($( "#slider-range" ).slider( "values",0));
-//   });
-
-
-
