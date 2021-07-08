@@ -8,7 +8,7 @@
             <div id="player" data-id="8c6ySS2AxF0"></div>
         </div>
         <div class="play-button">
-            <button href="https://www.youtube.com/watch?v=8c6ySS2AxF0" data-fancybox="video" aria-label="Play Vídeo">
+            <button class="play-btn" href="https://www.youtube.com/watch?v=8c6ySS2AxF0" data-fancybox="video" aria-label="Play Vídeo">
                 <i class="fas fa-play"></i>
             </button>
         </div>
