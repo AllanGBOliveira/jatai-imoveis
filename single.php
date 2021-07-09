@@ -265,7 +265,8 @@
 				<div class="col-sm-6">
 					<img data-src="./imgs/see-more-bee.png" class="lazyload" alt="see-more-bee">
 					<p class="footer-header"><strong>Envie uma mensagem para solicitar esse imóvel!</strong></p>
-					<p class="footer-text">Entraremos em contato com você para conversar sobre ele e agendar uma visita!</p>
+					<p class="footer-text">Entraremos em contato com você para conversar sobre ele e agendar uma visita!
+					</p>
 				</div>
 				<div class="col-sm-6">
 					<form action="" class="form-layout">
@@ -290,7 +291,7 @@
 										<option value="Quarta">Quarta</option>
 										<option value="Quinta">Quinta</option>
 										<option value="Sexta">Sexta</option>
-		
+
 									</select>
 									<div class="text">
 										<span>Dia da Semana</span>
@@ -308,7 +309,7 @@
 										<span>Período</span>
 									</div>
 								</label>
-		
+
 							</div>
 							<div class="form-group col-12 d-flex justify-content-between flex-wrap px-4 px-sm-3 ">
 								<div class="recaptcha">
@@ -318,7 +319,7 @@
 								<button style="border-radius: 100px;" type="submit">ENVIAR</button>
 							</div>
 						</div>
-		
+
 					</form>
 				</div>
 
@@ -386,36 +387,7 @@
 						</a>
 					</div>
 				</div>
-				<div class="col-10 col-sm-6 col-md-5 col-lg-4 col-xl-3">
-					<div class="item apartamento">
-						<a href="single.php">
-							<div class="thumb">
-								<figure aria-hidden="true">
-									<img class="img-cover lazyload" data-src="imgs/test/test-02.png" alt="Image 01">
-								</figure>
-							</div>
-							<h2 class="title-post">Apartamento Luxo bem longe para poder usar várias palavras e testar o tamanhos das colunas</h2>
-							<p class="local-post">Santana - Guarapuava</p>
-							<p class="price-post"> R$1.000.000,00</p>
-						</a>
-					</div>
-				</div>
-				<div class="col-10 col-sm-6 col-md-5 col-lg-4 col-xl-3">
-					<div class="item apartamento">
-						<a href="single.php">
-							<div class="thumb">
-								<figure aria-hidden="true">
-									<img class="img-cover lazyload" data-src="imgs/test/test-02.png" alt="Image 01">
-								</figure>
-							</div>
-							<h2 class="title-post">Apartamento Luxo</h2>
-							<p class="local-post">Santana - Guarapuava</p>
-							<p class="price-post"> R$1.000.000,00</p>
-						</a>
-					</div>
-				</div>
 			</div>
-
 		</div>
 	</div>
 	<!-- Modal Agendar Visita -->

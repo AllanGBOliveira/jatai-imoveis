@@ -5,55 +5,6 @@
 	</div>
 </section>
 <main id="page" tabindex="-1">
-	<!-- <div class="container">
-		<section class="page">
-			<article>
-				<div class="row">
-					<div class="col-12 sec">
-						<img data-src="./imgs/people.png" alt="">
-						<h5>Especialistas em selecionar
-							apenas os melhores imóveis</h5>
-						<p> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt
-							ut labore
-							et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-							nisi ut
-							aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit
-							esse
-							cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt
-							in
-							culpa qui </p>
-					</div>
-					<div class="col-12">
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
-							labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-							laboris nisi ut aliquip ex ea </p>
-					</div>
-					<div class="col-12">
-						<h5>missão</h5>
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
-							labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-							laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
-							voluptate velit </p>
-						<h5>valores</h5>
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
-							labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-							laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
-							voluptate velit </p>
-					</div>
-					<div class="col-12">Sec 4</div>
-				</div>
-			</article>
-		</section>
-		<section class="btn-default text-right">
-			<div class="container">
-				<a href="#">
-					<i class="fas fa-angle-left"></i>
-					<span>Voltar</span>
-				</a>
-			</div>
-			<br /><br />
-		</section>
-	</div> -->
 	<div class="row">
 		<div class="col-12 sec s-1 row">
 			<div class="col-12 col-lg-6 thumbnail ">

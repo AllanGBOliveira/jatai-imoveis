@@ -54,7 +54,7 @@
                     <li id="#register"><a href="register.php">Cadastre Seu
                             Imóvel</a></li>
                     <li id="#contact"><a href="contact.php">Entre em Contato</a></li>
-                    <li id="#client" ><a href="contact.php">Área do Cliente</a></li>
+                    <li id="#client" ><a href="contact.php" class="disabled">Área do Cliente</a></li>
                 </ul>
 
                 <button id="menu-toggle" onClick="toggleMenu()" aria-expanded="false" aria-label="Abrir menu lateral">

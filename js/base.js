@@ -14,6 +14,32 @@ window.addEventListener('load', wrapperMinHeight);
 window.addEventListener('resize', wrapperMinHeight);
 
 //--Sliders---------------------------------------------------------------------------------------//
+var swiper = new Swiper(".mySwiper", {
+    breakpoints: {
+        0: {
+            slidesPerView: 1,
+            spaceBetween: 26,
+        },
+        768: {
+            slidesPerView: 2,
+            spaceBetween: 26,
+        },
+        992: {
+            slidesPerView: 3,
+            spaceBetween: 0,
+        },
+        
+        1200: {
+            slidesPerView: 3,
+            spaceBetween: 26,
+        },
+    },
+    loop: true,
+    navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+    },
+});
 
 var swiperTranslations = {
     firstSlideMessage: 'Esse é o primeiro slide',
@@ -95,6 +121,8 @@ if (hasGallery) {
         });
     });
 }
+
+//
 
 /* eslint-enable no-undef */
 
