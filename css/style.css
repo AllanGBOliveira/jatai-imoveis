@@ -3607,27 +3607,27 @@ footer #k13 a:hover {
   }
 }
 
-#contact {
+main#contact {
   overflow: hidden;
   position: relative;
   background-color: #4a4a4a;
 }
 
-#contact .content {
+main#contact .content {
   margin-right: 15px;
 }
 
-#contact .infos * {
+main#contact .infos * {
   z-index: 1;
   position: relative;
 }
 
-#contact .infos {
+main#contact .infos {
   padding: 30px 0;
   position: relative;
 }
 
-#contact .infos:before {
+main#contact .infos:before {
   position: absolute;
   content: "";
   background-color: #282828;
@@ -3638,7 +3638,7 @@ footer #k13 a:hover {
   z-index: 0;
 }
 
-#contact .contact {
+main#contact .contact {
   margin: 10px 0 15px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -3648,62 +3648,62 @@ footer #k13 a:hover {
   margin-top: 24.5px;
 }
 
-#contact .contact .contact-item a {
+main#contact .contact .contact-item a {
   margin-bottom: 21px;
   color: #fff;
   display: block;
   font-size: 16px;
 }
 
-#contact .contact .contact-item a:nth-child(odd) {
+main#contact .contact .contact-item a:nth-child(odd) {
   margin-right: 14px;
 }
 
 @media (max-width: 991.98px) {
-  #contact .contact .contact-item a {
+  main#contact .contact .contact-item a {
     margin-right: 0;
   }
 }
 
-#contact .contact .contact-item a svg {
+main#contact .contact .contact-item a svg {
   display: inline-block;
   color: #ed8f01;
   font-size: 16pt;
 }
 
-#contact .contact .contact-item a:hover {
+main#contact .contact .contact-item a:hover {
   color: #ed8f01;
 }
 
-#contact address h2 {
+main#contact address h2 {
   color: #fff;
   font-size: 20px;
   font-weight: bold;
   text-transform: uppercase;
 }
 
-#contact address p,
-#contact address a {
+main#contact address p,
+main#contact address a {
   color: #fff;
   display: table;
 }
 
-#contact address a:hover {
+main#contact address a:hover {
   text-decoration: underline;
 }
 
-#contact .form-layout {
+main#contact .form-layout {
   margin: 45px 0 50px;
 }
 
-#contact .form-layout h2 {
+main#contact .form-layout h2 {
   color: #ed8f01;
   font-size: 18px;
   font-weight: bold;
   margin-bottom: 10px;
 }
 
-#contact .map {
+main#contact .map {
   display: block;
   width: 50vw;
   height: 100%;
@@ -3713,24 +3713,24 @@ footer #k13 a:hover {
   text-transform: uppercase;
 }
 
-#contact .map .skip-link {
+main#contact .map .skip-link {
   position: absolute;
   z-index: 1;
 }
 
-#contact .map #map {
+main#contact .map #map {
   width: 100%;
   height: 100%;
 }
 
-#contact .map #markerLayer img {
+main#contact .map #markerLayer img {
   -webkit-animation: pulse 0.5s infinite alternate;
   animation: pulse 0.5s infinite alternate;
   -webkit-transform-origin: center;
   transform-origin: center;
 }
 
-#contact .map .waze {
+main#contact .map .waze {
   position: absolute;
   bottom: 10px;
   left: 50%;
@@ -3742,18 +3742,18 @@ footer #k13 a:hover {
   font-size: 18px;
 }
 
-#contact .map .waze svg,
-#contact .map .waze span {
+main#contact .map .waze svg,
+main#contact .map .waze span {
   display: inline-block;
   vertical-align: middle;
 }
 
-#contact .map .waze svg {
+main#contact .map .waze svg {
   font-size: 31px;
   margin-right: 8px;
 }
 
-#contact .map .waze:hover {
+main#contact .map .waze:hover {
   opacity: 0.6;
 }
 

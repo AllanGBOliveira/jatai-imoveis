@@ -48,13 +48,13 @@
                     <img srcset="imgs/logo.png, imgs/logo-2x.png 2x" src="imgs/logo-2x.png" alt="Site Base" />
                 </a>
                 <ul id="#nav" class="nav navbar-nav">
-                    <li id="#index"><a href="index.php">Home</a></li>
-                    <li id="#page"><a href="page.php">Quem Somos</a></li>
-                    <li id="#blog" ><a href="blog.php">Nosso Catálogo</a></li>
-                    <li id="#register"><a href="register.php">Cadastre Seu
+                    <li id="index"><a href="index.php">Home</a></li>
+                    <li id="page"><a href="page.php">Quem Somos</a></li>
+                    <li id="blog" ><a href="blog.php">Nosso Catálogo</a></li>
+                    <li id="register"><a href="register.php">Cadastre Seu
                             Imóvel</a></li>
-                    <li id="#contact"><a href="contact.php">Entre em Contato</a></li>
-                    <li id="#client" ><a href="contact.php" class="disabled">Área do Cliente</a></li>
+                    <li id="contact"><a href="contact.php">Entre em Contato</a></li>
+                    <li id="client" ><a href="contact.php" class="disabled">Área do Cliente</a></li>
                 </ul>
 
                 <button id="menu-toggle" onClick="toggleMenu()" aria-expanded="false" aria-label="Abrir menu lateral">

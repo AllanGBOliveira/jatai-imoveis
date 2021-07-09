@@ -6,15 +6,16 @@
             </p>
             <p>procura ou código do imóvel</p>
         </div>
-        <form class="btn-search" action="search.php" method="GET" role="search">
+        <form class="btn-search" action="blog.php" method="GET" role="search">
             <input type="search" id="search-mobile" name="search"
-                placeholder="Digite aqui o imóvel que você procura ou código do imóvel" aria-label="Pesquisar"
-                required />
+                placeholder="Digite aqui o imóvel que você procura ou código do imóvel" aria-label="Pesquisar" />
             <button type="submit" aria-label="Buscar"><i class="fas fa-search"></i></button>
         </form>
-
-        <button type="button" class=" btn-color-4">quero comprar</button>
-        <button type="button" class=" btn-color-3">quero alugar</button>
+        <form action="blog.php" method="GET" role="search">
+            <button class=" btn-color-4" type="submit">quero comprar</button>
+            <button  class=" btn-color-3" type="submit">quero alugar</button>
+            
+        </form>
     </div>
 
 </div>

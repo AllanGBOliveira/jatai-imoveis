@@ -28,7 +28,7 @@ var swiper = new Swiper(".mySwiper", {
             slidesPerView: 3,
             spaceBetween: 0,
         },
-        
+
         1200: {
             slidesPerView: 3,
             spaceBetween: 26,
@@ -663,3 +663,11 @@ $(function () {
     $("#val-2").val($("#slider-range").slider("values", 1));
 }
 );
+
+
+//breadcrumb active class//
+const activeClass = document.querySelector("main");
+
+var headerItem = document.getElementById(activeClass.id);
+headerItem.classList.add("active")
+

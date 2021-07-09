@@ -133,10 +133,10 @@
                 </div>
 
                 <div class="col-12 d-flex justify-content-center">
-                    <button class="btn-transparent">
+                    <a href="blog.php" class="btn-transparent">
                         <span>Ver Mais</span>
                         <i class="fas fa-spinner"></i>
-                    </button>
+                    </a>
                 </div>
             </div>
         </div>
