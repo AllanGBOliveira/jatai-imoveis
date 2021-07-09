@@ -11,7 +11,7 @@
                 placeholder="Digite aqui o imóvel que você procura ou código do imóvel" aria-label="Pesquisar" />
             <button type="submit" aria-label="Buscar"><i class="fas fa-search"></i></button>
         </form>
-        <form action="blog.php" method="GET" role="search">
+        <form action="blog.php" method="GET" role="search" class="d-flex justify-content-center flex-wrap">
             <button class=" btn-color-4" type="submit">quero comprar</button>
             <button  class=" btn-color-3" type="submit">quero alugar</button>
             

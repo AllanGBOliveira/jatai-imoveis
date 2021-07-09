@@ -949,7 +949,7 @@ header {
             }
         }
 
-        @include media-down(sm) {
+        @include media-down(lg) {
             position: absolute;
             box-shadow: none;
 
